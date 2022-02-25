@@ -31,9 +31,15 @@ export default {
       }
     }
   },
+  computed: {
+    targets() {
+      this.$store.getter.getTooltipTargets;
+    }
+  },
   methods: {
     assignTargetsEvent() {
       const targets = document.querySelectorAll(".tooltipBox");
+      // const targets = this.$store.getter.getTooltipTargets;
       const length =  targets.length;
       console.log(targets);
       
@@ -65,8 +71,9 @@ export default {
     }
   },
   mounted() {
-    console.log("뭔데");
     this.assignTargetsEvent();
+    this.$store.commit("assignTooltipTargets");
+    console.log(this.targets);
   }
 }
 </script>

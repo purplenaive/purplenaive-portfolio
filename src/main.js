@@ -12,14 +12,23 @@ const store = createStore({
       coding_category: 769738,
       instagram_user_id: "17841402014008066",
       instagram_long_lived_access_token: "IGQVJXcUVGQzVGc2V3cUw5RUdLd1FvNUY4dDVfQXVZAX3d1cFZARcHJCNHk1TE1VaVdxb2FzcGlFd2FibnJXU3NsczljdzUxSU9Hb3pEcUE0cnQzaFZAwUDdLNm9ucllLajFTZAmlUYmlR",
+      tooltip_targets: []
     }
   },
   mutations: {
+    assignTooltipTargets(state) {
+      const targets = document.querySelectorAll(".tooltipBox");
+      console.log("tooltip mutations run");
+      state.tooltip_targets = targets;
+    }
   },
   getters: {
+    getTooltipTargets(state) {
+      return state.tooltip_targets;
+    }
   }
 })
 
 const app = createApp(App);
 
-app.use(router).use(store).mount("#app")
+app.use(router).use(store) .mount("#app")

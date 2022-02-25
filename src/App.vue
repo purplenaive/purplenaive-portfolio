@@ -23,9 +23,6 @@ export default {
   },
   mounted() {
   },
-  updated() {
-    console.log("update");
-  },
 }
 </script>
 
