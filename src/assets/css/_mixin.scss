@@ -7,25 +7,49 @@
   align-items: $align;
 }
 
-@mixin glassmorphism($header: false, $padding: true, $shadow: true) {
+@mixin glassmorphism($header: false, $padding: true, $shadow: true, $tilt: true) {
   border-radius: 24px;
   border: 1px solid rgba(white, 0.6);
+  overflow: hidden;
   transition: all 0.3s linear;
   backdrop-filter: blur(10px);
-  background-color: rgba(white, 0.6);
+  background-color: rgba(white, 0.5);
   background-position: left top;
   background-repeat: no-repeat;
   background-size: 500% 500%;
   
   @if($shadow) {
-    box-shadow: 0 2px 8px 0 rgba($black, 0.25);
+    box-shadow: 0 2px 6px 0 rgba($black, 0.25);
   }
-  
+
+  &.tile--has-header {
+    @include flex(column, nowrap, stretch, stretch);
+
+    .tile__title {
+      @include flex(row, nowrap, center, center);
+      
+      height: 48px;
+      flex: 0 0 auto;
+      text-align: center;
+      font-size: $font-large;
+      border-bottom: 1px solid rgba(white, 0.6);
+      margin: 0;
+    }
+    .tile__content {
+      flex: 1 1 auto;
+    }
+  }
+
   &:hover {
-    transform: rotate3d(0.3, 0.6, 0.04, 20deg);
-    transition: transform 0.3s ease, background-position 0.6s;
-    background-image: linear-gradient(to right bottom, transparent 40%, rgba(white, 0.6) 60%, transparent 80%);
+    transition: background-position 0.8s;
+    z-index: 11;
+    background-image: linear-gradient(to right bottom, transparent 40%, rgba(white, 0.4) 60%, transparent 80%);
     background-position: 400% 400%;
+    
+    @if($tilt) {
+      transform: rotate3d(0.3, 0.6, 0.04, 20deg);
+      transition: transform 0.3s ease, background-position 0.8s;
+    }
   }
   
   .tile__content {
