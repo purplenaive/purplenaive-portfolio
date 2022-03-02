@@ -79,3 +79,14 @@
   &.mail-fab { background-image: url(icon(mail-fab)); }
   &.paper-fab { background-image: url(icon(paper-fab)); }
 }
+
+button {
+
+  &:disabled {
+
+    .icon {
+
+      opacity: 0.5;
+    }
+  }
+}

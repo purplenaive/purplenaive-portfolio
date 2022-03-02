@@ -204,7 +204,7 @@ export default {
         {
           name: "premier",
           icon: "pr-flat",
-          description: "간단한 유튜브 영상이 가능합니다",
+          description: "간단한 유튜브 영상 편집이 가능합니다",
         },
         {
           name: "illustration",

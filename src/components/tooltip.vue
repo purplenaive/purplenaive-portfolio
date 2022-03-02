@@ -28,20 +28,21 @@ export default {
       position: {
         left: 0,
         top: 0,
-      }
+      },
     }
   },
-  computed: {
-    targets() {
-      this.$store.getter.getTooltipTargets;
+  props: [
+    "target",
+  ],
+  watch: {
+    target() {
+      this.assignTargetsEvent();
     }
   },
   methods: {
     assignTargetsEvent() {
-      const targets = document.querySelectorAll(".tooltipBox");
-      // const targets = this.$store.getter.getTooltipTargets;
+      const targets = this.target || [];
       const length =  targets.length;
-      console.log(targets);
       
       for(let i = 0; i < length; i++) {
         const target = targets[i];
@@ -73,8 +74,7 @@ export default {
   mounted() {
     this.assignTargetsEvent();
     this.$store.commit("assignTooltipTargets");
-    console.log(this.targets);
-  }
+  },
 }
 </script>
 

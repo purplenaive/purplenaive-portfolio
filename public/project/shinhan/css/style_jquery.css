@@ -1,0 +1,718 @@
+﻿@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+
+
+/* jquery tap 설정용 시작 */
+
+#card_reco_img .card_reco_img_menu ul li a{display: none;}
+
+.selectedB{
+	height: 45px !important;
+	border-bottom: 5px solid #197aad !important;
+}
+
+/* jquery tap 설정용 끝 */
+
+
+
+#main_imgW{
+	width: 100%;
+	height: 340px;
+	position: relative;
+}
+
+
+
+.pageButton{
+	width: 100%;
+	height: 340px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#page_left{
+	float: left;
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	left: 5%;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	border: 1px solid white;
+	background: url(../images/page_left.png) no-repeat;
+	z-index: 99;
+}
+#page_left:hover{
+	background-color: rgba(0,0,0,0.3);
+	background-image: url(../images/page_left_hover.png);
+	border: 1px solid rgba(0,0,0,0.5);
+}
+#page_right{
+	float: left;
+	position: absolute;
+	margin-top: -30px;
+	top: 50%;
+	right: 5%;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	border: 1px solid white;
+	background: url(../images/page_right.png) no-repeat;
+	z-index: 99;
+}
+#page_right:hover{
+	background-color: rgba(0,0,0,0.3);
+	background-image: url(../images/page_right_hover.png);
+	border: 1px solid rgba(0,0,0,0.5);
+}
+
+
+
+#main_img{
+	width: 1000px;
+	height: 340px;
+	margin: 0px auto;
+	position: relative;
+}
+
+
+
+#DefaultBG{
+	width: 100%;
+	height: 340px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: transparent;
+}
+
+
+
+.BGS{
+	width: 100%;
+	height: 340px;
+	position: absolute;
+	left: 0;
+	top:0;
+	overflow: hidden;
+}
+
+.RedBG{
+	background: #7a324c url(../images/redBG.jpg) no-repeat center;
+	width: 100%;
+	height: 340px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.BlueBG{
+	background: #2f5ba2 url(../images/blueBG.jpg) no-repeat center;
+	width: 100%;
+	height: 340px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.LilacBG{
+	background: #4d547e url(../images/lilacBG.jpg) no-repeat center;
+	width: 100%;
+	height: 340px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+#event_img{
+	width: 666px;
+	height: 340px;
+	float: left;
+	position: relative;
+}
+#more_info_button{
+	width: 120px;
+	height: 30px;
+	background: transparent;
+	border-radius: 20px;
+	border: 1px solid white;
+	z-index: 99;
+	line-height: 30px;
+	position: absolute;
+	top: 230px;
+	left: 35px;
+}
+#more_info_button>a{
+	display: block;
+	width: 90%;
+	height: 30px;
+	margin: 0px auto;
+	color: white;
+	text-shadow: 1px 1px 3px gray;
+	font-weight: bold;
+	text-align: center;
+	font-size: 14px;
+	font-family: 'Nanum Gothic', serif;
+}
+.event_paging{
+	position: absolute;
+	bottom: 25px;
+	left: 20px;
+}
+.event_paging ul{float: left}
+.event_paging li{
+	float: left;
+	width: 7px;
+	height: 7px;
+	margin-right: 8px;
+	background: transparent;
+	border-radius: 50%;
+	border: 1px solid white;
+	cursor: pointer;
+}
+.event_paging li:hover{background: rgba(255,255,255,0.5);}
+.event_paging li.nowshow{background: white;}
+.EP_stop{
+	float: left;
+	width: 7px;
+	height: 7px;
+	background: transparent;
+	border: 1px solid white;
+	margin-right: 8px;
+	cursor: pointer;
+}
+.EP_stop:hover{background: rgba(255,255,255,0.5);}
+
+
+
+
+
+
+#now_ing_event{
+	position: absolute;
+	bottom: 20px;
+	right: 30px;
+}
+#event_menu{
+	width: 334px;
+	height: 340px;
+	float: left;
+	background: rgba(0,0,0,0.2);
+	position: relative;
+}
+#event_menu>div.event_menu_ul{
+	width: 240px;
+	height: 330px;
+	margin: 0px auto;
+	padding-top: 10px;
+	overflow: hidden;
+}
+#event_menu>div.event_menu_ul>ul{
+	width: 360px; 
+	height: 330px; 
+}
+#event_menu>div.event_menu_ul>ul>li{
+	float: left;
+	width: 120px;
+	height: 80px;
+	font-size: 13px;
+	text-align: center;
+	font-family: 'Nanum Gothic', serif;
+	line-height: 130px;
+	opacity: 0.7;
+}
+#event_menu>div.event_menu_ul>ul>li:hover{opacity: 1;}
+#event_menu>div.event_menu_ul>ul>li>a{color: white;}
+.event_menu1{background: url(../images/clipboard.png) no-repeat; background-position: center 30%;}
+.event_menu2{background: url(../images/user.png) no-repeat; background-position: center 30%;}
+.event_menu3{background: url(../images/charge.png) no-repeat; background-position: center 30%;}
+.event_menu4{background: url(../images/clipboards2.png) no-repeat; background-position: center 30%;}
+.event_menu5{background: url(../images/calendar.png) no-repeat; background-position: center 30%;}
+.event_menu6{background: url(../images/tax.png) no-repeat; background-position: center 30%;}
+.event_menu7{background: url(../images/limit_find.png) no-repeat; background-position: center 30%;}
+.event_menu8{background: url(../images/payment.png) no-repeat; background-position: center 30%;}
+.event_menu9{background: url(../images/shield.png) no-repeat; background-position: center 30%;}
+.event_menu10{background: url(../images/online.png) no-repeat; background-position: center 30%;}
+.event_menu11{background: url(../images/point.png) no-repeat; background-position: center 30%;}
+.event_menu12{background: url(../images/mycard.png) no-repeat; background-position: center 30%;}
+.event_menu_left{
+	width: 20px;
+	height: 50px;
+	background: white;
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	margin-top: -25px;
+	background: url(../images/event_menu_left.png) no-repeat center;
+	cursor: pointer;
+	opacity: 0.4;
+}
+.event_menu_right{
+	width: 20px;
+	height: 50px;
+	background: white;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -25px;
+	background: url(../images/event_menu_right.png) no-repeat center;
+	cursor: pointer;
+	opacity: 0.4;
+}
+
+
+
+#contentW{
+	background: #f7f7f7; 
+} 
+#main_content{
+	width: 1000px;
+	margin: 0px auto;
+	position: relative;
+}
+
+
+#card_recommand{
+	background: #f7f7f7;
+	width: 1000px;
+	height: 280px;
+	position: relative;
+}
+#card_reco_img{
+	float: left;
+	width: 665px;
+	height: 280px;
+	border-left: 1px solid #dbdbdb;
+	border-right: 1px solid #dbdbdb;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.card_reco_img_menu{
+	width: 470px;
+	height: 50px;
+	margin: 0px auto;
+	margin-top: 20px;
+	line-height: 45px;
+}
+.card_reco_img_menu ul li{
+	float: left;
+	text-align: center;
+	height: 48px;
+	border-bottom: 2px solid lightgray;
+}
+.card_reco_img_menu>ul>li>a{
+	display: block !important;
+	width: 100%;
+	font-weight: bold; 
+	color: #646464;
+}
+.card_reco_img_menu ul li:hover{
+	height: 45px;
+	border-bottom: 5px solid #197aad;
+}
+.card_reco_img_menu ul li:hover a{
+	color: #197aad;
+	font-weight: bold;
+}
+.reco_img_menu1{width: 70px;}
+.reco_img_menu2{width: 90px;}
+.reco_img_menu3{width: 170px;}
+
+
+#card_img_wrapper{
+	margin: 20px auto;
+	width: 470px;
+	height: 140px;
+}
+
+
+
+.card_img_basic{
+	width: 100%;
+	height: 134px;
+	margin: 0px auto;
+	cursor: pointer;
+}
+.card_img_basic>div.CI1{
+	width: 214px;
+	height: 134px;
+	float: left;
+	position: relative;
+}
+.card_img_basic>div.CI2{
+	width: 214px;
+	height: 134px;
+	float: right;
+	position: relative;
+}
+.card_img_basic>div>div{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 14px;
+	float: left;
+	position: absolute;
+	top: 0;
+	left:0;
+	background: #f7f7f7;
+}
+.card_img_basic>div>div>h3{margin: 20px 0 10px 0;}
+.CI1>div>div{margin-top: 10px;}
+.CI2>div>div{margin-top: 10px;}
+.card_reco_button1{
+	background: white;
+	border: 1px solid #dbdbdb;
+	width: 80px;
+	height: 30px;
+	line-height: 20px;
+	font-size: 12px;
+	font-family: 'Nanum Gothic', serif;
+}
+.card_reco_button2{
+	background: #197aad;
+	border: none;
+	width: 82px;
+	height: 32px;
+	line-height: 20px;
+	color: white;
+	font-size: 12px;
+	font-family: 'Nanum Gothic', serif;
+}
+.card_img_basic>div>img{
+	position: absolute;
+	width: 214px;
+	height: 134px;
+}
+
+
+
+
+#card_img{
+	width: 100%;
+	height: 134px;
+}
+#card_img .CI2_1{
+	width: 214px;
+	height: 134px;
+	float: left;
+}
+#card_img .CI2_2{
+	width: 214px;
+	height: 134px;
+	float: right;
+}
+#card_img5{
+	background: url(../images/recommandToF.png) no-repeat right top;
+	background-size: auto 150px;
+	padding-top: 1px;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+#card_img5 h2{
+	display: block;
+	margin: 10px 0;
+	color: #444444;
+	font-weight: bold;
+}
+#card_img5>p{
+	color: #777777;
+	font-size: 15px;
+	line-height: 150%;
+}
+#card_img5 .moreBTN{
+	width: 20%;
+	margin-top: 25px;
+	font-size: 15px;
+	color: #777777;
+	background: url(../images/bt_bg_8_20.png) no-repeat right center;
+}
+#card_img5 .moreBTN:hover{
+	color: #555555; 
+	font-weight: bold;
+	background: url(../images/bt_bg_hover_8_20.png) no-repeat right center;
+}
+
+
+#card_reco_menu{
+	float: right;
+	width: 332px;
+	height: 280px;
+	border-right: 1px solid #dbdbdb;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+#card_reco_menu ul{
+	width: 265px;
+	height: 250px;
+	margin: 20px auto;
+	text-align: left;
+	font-family: 'Nanum Gothic', serif;
+}
+#card_reco_menu ul li{
+	height: 49px;
+	font-size: 16px;
+	border-bottom: 1px solid #dbdbdb;
+	line-height: 50px;
+	background: url(../images/bt_bg.png) no-repeat right;
+}
+.reco_menuE{border-bottom: none !important;}
+#card_reco_menu ul li:hover{
+	background: url(../images/bt_bg_hover.png) no-repeat right;
+}
+#card_reco_menu ul li a{font-weight: 700; color: #444444;}
+#card_reco_menu ul li:hover a{color: black;}
+
+
+
+#sixMenu{
+	width: 1000px; 
+	height: 418px;
+	font-family: 'Nanum Gothic', serif;
+	position: relative;
+	background: white;
+}
+/* #sixMenu>div>div{ 각자 탭 위치 조정하는거 아래에 레이아웃 설정임
+	width: 80%;
+	height: 80%;
+	margin: 10% auto;
+	line-height: 30px;
+}
+#sixMenu>div>div>div{ 그 아래에 탭메뉴에도 적용되는 설정임
+	width: 80%;
+	height: 80%;
+	margin: 10% auto;
+	line-height: 30px;
+	background: orange;
+} */
+#sixMenu div div ul{ margin-top: 20px;}
+#sixMenu div div ul li{
+	line-height: 20px;
+	width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#sixMenu div div a{
+	font-size: 14px;
+	color: #666666;
+}
+#sixMenu h4{font-size: 16px;}
+#sixMenu h5{font-size: 12px;}
+
+/* 식스메뉴 팬 식스 */
+.fan_six{
+	background: url(../images/FANbg.png) no-repeat 95% 90%;
+	width: 332px;
+	height: 208px;
+	float: left;
+	border: 1px solid #dbdbdb;
+	border-right: 0px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.fan_six>div{
+	width: 85%;
+	height: 80%;
+	margin: 10% auto 0 auto;
+}
+.fan_six li{background: url(../images/bt_bg_8_20.png) no-repeat right;}
+.fan_six li:hover{background: url(../images/bt_bg_hover_8_20.png) no-repeat right;}
+.fan_six div ul li:hover a{color: black !important;}
+/* 식스메뉴 금융 식스 */
+.kum_six{
+	width: 332px;
+	height: 208px;
+	border: 1px solid #dbdbdb;
+	border-right: 0px;
+	position: absolute;
+	top: 0;
+	left: 333px;
+}
+.kum_six>div.kumTabs{
+	width: 85%;
+	height: 80%;
+	margin: 10% auto 0 auto;
+}
+.kumTabs>div{width: 100%; height: 100%;}
+.kumTabs div.kumTab p{line-height: 150%; margin-top: 20px;}
+.kumTabs div.kumTab h5{margin-top: 20px;}
+.kumTabs div.KT0{background: url(../images/kumbg.png) no-repeat right 90%}
+.kumTabs div.KT1{background: url(../images/kumTab1.png) no-repeat right 90%}
+.kumTabs div.KT2{background: url(../images/kumTab2.png) no-repeat right 90%}
+.kumTabs div.KT3{background: url(../images/kumTab3.png) no-repeat right 90%}
+.kumTabs .kumOrigin li{
+	width: 180px !important;
+	background: url(../images/bt_bg_8_20.png) no-repeat right;
+	line-height: 20px;
+	width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.kum_six .kumOrigin li:hover{background: url(../images/bt_bg_hover_8_20.png) no-repeat right;}
+.kum_six .kumOrigin ul li:hover a{color: black !important;}
+/* 식스메뉴 올댓 식스 */
+.allthat_six{
+	width: 332px;
+	height: 208px;
+	float: right;
+	border: 1px solid #dbdbdb;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.allthat_six .ATtabs{
+	width: 85%;
+	height: 80%;
+	margin: 10% auto 0 auto;
+}
+.allthat_six .ATtabs>div{
+	width: 100%; 
+	height: 100%; 
+}
+.allthat_six .ATtabs h5{margin-top: 20px;}
+.allthat_six .ATtab1{background: url(../images/allthatbg1.png) no-repeat right 90%; }
+.allthat_six .ATtab2{background: url(../images/allthatbg2.png) no-repeat right 90%; }
+.allthat_six .ATtab3{background: url(../images/allthatbg3.png) no-repeat right 90%; }
+/* 식스메뉴 공지 식스 */
+.notice_six{
+	width: 332px;
+	height: 209px;
+	float: left;
+	clear: both;
+	border-left: 1px solid #dbdbdb;
+	border-bottom: 1px solid #dbdbdb;
+	position: absolute;
+	top: 209px;
+	left: 0;
+}
+.notice_six>div{
+	width: 85%;
+	height: 80%;
+	margin: 10% auto 0 auto;
+	overflow: hidden;
+}
+.notice_six>div ul{margin-top: 40px !important;}
+.notice_six h4{background: url(../images/bt_bg_14_35.png) no-repeat right;}
+/* 식스메뉴 소비자보호 식스 */
+.protect_six{
+	width: 332px;
+	height: 209px;
+	float: left;
+	border-left: 1px solid #dbdbdb;
+	border-bottom: 1px solid #dbdbdb;
+	position: relative;
+	top: 209px;
+	left: 333px;
+}
+.protect_six .protectTabs{
+	width: 85%;
+	height: 80%;
+	margin: 10% auto 0 auto;
+	overflow: hidden;
+}
+.protect_six .protectTabs>div ul{margin-top: 40px !important;}
+.protect_six .protectTabs>div{width: 100%; height: 100%;}
+.protect_six .protectTabs>div.proTab1{background: white url(../images/protectbg1.png) no-repeat right 90%;}
+.protect_six .protectTabs>div.proTab2{background: white url(../images/protectbg2.png) no-repeat right 90%;}
+.protect_six .protectTabs>div.proTab3{background: white url(../images/protectbg3.png) no-repeat right 90%;}
+.protect_six .protectTabs>div.proTab4{background: white url(../images/protectbg4.png) no-repeat right 90%;}
+/* 식스메뉴 투표 식스 */
+.poll_six{
+	background-image: url(../images/pollbg.png);
+	background-repeat: no-repeat;
+	background-position: 90% 90%;
+	width: 332px;
+	height: 209px;
+	float: right;
+	border: 1px solid #dbdbdb;
+	border-top: 0px;
+	position: absolute;
+	top: 209px;
+	right: 0px;
+}
+.poll_six>div{
+	width: 85%;
+	height: 80%;
+	margin: 10% auto 0 auto;
+	overflow: hidden;
+}
+.color_gray{color: gray; font-weight: 400;}
+.overflowS{text-overflow: ellipsis;}
+.overflowS:hover{text-decoration: underline;}
+/* 페이징 표시기 */
+.sixPage{
+	z-index: 99;
+	position: absolute;
+	bottom: 25px;
+	left: 35px;
+	height: 10px !important;
+	width: auto !important;
+	margin: 0 !important;
+}
+.allthatTs>.sixPage{
+	position: absolute;
+	bottom: 25px;
+	left: 35px;
+}
+.sixPage .pageStop{
+	width: 7px !important;
+	height: 7px !important; 
+	border: 1px solid lightgray;
+	float: left;
+	margin: 0 7px 0 0 !important;
+	cursor: pointer;
+}
+.sixPage>ul{margin: 0 !important; float: left;}
+.sixPage>ul>li{
+	float: left;
+	width: 7px !important;
+	height: 7px;
+	background: white;
+	border-radius: 50%;
+	border: 1px solid lightgray;
+	margin-right: 7px;
+	line-height: 7px;
+	cursor: pointer;
+}
+.sixPage>ul>li:hover{background: lightgray;}
+.sixPage>ul>li.KTon{background: rgba(0,0,0,0.4);}
+.sixPage>ul>li.ATon{background: rgba(0,0,0,0.4);}
+.sixPage>ul>li.PROon{background: rgba(0,0,0,0.4);}
+
+#floatButtonW{
+	position: absolute;
+	background-color: gray;
+	background-image: url(../images/remote_support.png);
+	background-repeat: no-repeat;
+	background-position: 22.5px 15px;
+	width: 90px;
+	height: 90px;
+	border-radius: 50px;
+	float: left;
+	top: 0px;
+	right: -150px;
+	z-index: 999;
+	border: 3px solid gray;
+}
+#floatButtonW a{
+	font-family: 'Nanum Gothic', serif;
+	text-align: center;
+	line-height: 145px;
+	font-size: 11px;
+	font-weight: bold;
+	color: white;
+}
+#floatButtonW:hover{
+	background-color: white;
+	background-image: url(../images/remote_support_hover.png);
+	background-repeat: no-repeat;
+	background-position: 22.5px 15px;
+	border: 3px solid lightgray;
+}
+#floatButtonW:hover a{
+	color: #7a7a7a;
+}
+
+

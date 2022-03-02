@@ -3,11 +3,11 @@
     "name": "yg-stage",
     "image": "",
     "period": {
-      "start": "21.01.01",
-      "end": "21.01.01",
-      "duration": "약 2개월"
+      "start": "18.06",
+      "end": "18.07",
+      "duration": "약 1개월"
     },
-    "description": "",
+    "description": "동영상을 바탕으로 직접 디자인, 퍼블리싱한 동영상 페이지입니다",
     "color": [
       "#ff0000",
       "#ff00ff",
@@ -22,18 +22,18 @@
     ],
     "link": {
       "git": "", 
-      "page": ""
+      "page": "/project/ygstage/index.html"
     }
   },
   "8": {
     "name": "xiaomi",
     "image": "",
     "period": {
-      "start": "21.01.01",
-      "end": "21.01.01",
-      "duration": "약 2개월"
+      "start": "18.08",
+      "end": "18.09",
+      "duration": "약 1개월"
     },
-    "description": "",
+    "description": "처음으로 jQuery를 이용해 복잡한 슬라이더를 스스로 제작해봤던 페이지입니다. 익힌 jQuery를 더 깊게 이해할 수 있게되었습니다.",
     "color": [
       "#ff0000",
       "#ff00ff",
@@ -48,18 +48,18 @@
     ],
     "link": {
       "git": "", 
-      "page": ""
+      "page": "/project/xiaomi/index.html"
     }
   },
   "9": {
     "name": "shinhan",
     "image": "",
     "period": {
-      "start": "21.01.01",
-      "end": "21.01.01",
-      "duration": "약 2개월"
+      "start": "18.04",
+      "end": "18.10",
+      "duration": "약 6개월"
     },
-    "description": "",
+    "description": "첫 제작 페이지에 jQuery를 추가 작업한 페이지 입니다. jQuery가 '직관적임'을 몸소 느낄 수 있었습니다",
     "color": [
       "#ff0000",
       "#ff00ff",
@@ -74,18 +74,18 @@
     ],
     "link": {
       "git": "", 
-      "page": ""
+      "page": "/project/shinhan/indexJquery.html"
     }
   },
   "10": {
     "name": "elle",
     "image": "",
     "period": {
-      "start": "21.01.01",
-      "end": "21.01.01",
-      "duration": "약 2개월"
+      "start": "18.11",
+      "end": "18.12",
+      "duration": "약 1개월"
     },
-    "description": "",
+    "description": "습득했던 반응형과 스크립트를 더 확실하게 익히기 위해서 100% 스스로 제작한 반응형 홈페이지입니다.",
     "color": [
       "#ff0000",
       "#ff00ff",
@@ -100,18 +100,18 @@
     ],
     "link": {
       "git": "", 
-      "page": ""
+      "page": "/project/elle/index.html"
     }
   },
   "11": {
     "name": "paik",
     "image": "",
     "period": {
-      "start": "21.01.01",
-      "end": "21.01.01",
-      "duration": "약 2개월"
+      "start": "18.11",
+      "end": "18.12",
+      "duration": "약 1개월"
     },
-    "description": "",
+    "description": "반응형 처리에 있어서, css와 jQuery를 서로 연계하여 이해할 수 있게 된 페이지입니다.",
     "color": [
       "#ff0000",
       "#ff00ff",
@@ -126,18 +126,18 @@
     ],
     "link": {
       "git": "", 
-      "page": ""
+      "page": "/project/paiks/index.html"
     }
   },
   "12": {
     "name": "maeil",
     "image": "maeil",
     "period": {
-      "start": "21.01.01",
-      "end": "21.01.01",
-      "duration": "약 2개월"
+      "start": "18.06",
+      "end": "18.07",
+      "duration": "약 1개월"
     },
-    "description": "",
+    "description": "처음 media query를 사용해 제작한 반응형 홈페이지입니다. float와 우선순위를 비롯해 css를 더 깊게 이해할 수 있었습니다.",
     "color": [
       "#ff0000",
       "#ff00ff",
@@ -152,18 +152,18 @@
     ],
     "link": {
       "git": "", 
-      "page": ""
+      "page": "/project/maeil/index.html"
     }
   },
   "13": {
     "name": "cafe24",
     "image": "cafe24",
     "period": {
-      "start": "21.01.01",
-      "end": "21.01.01",
+      "start": "18.12",
+      "end": "19.02",
       "duration": "약 2개월"
     },
-    "description": "",
+    "description": "카페24를 이용하여 제작했던 쇼핑몰입니다. 사진으로만 확인하실 수 있습니다",
     "color": [
       "#ff0000",
       "#ff00ff",
@@ -185,11 +185,11 @@
     "name": "pd04",
     "image": "04pd",
     "period": {
-      "start": "21.01.01",
-      "end": "21.01.01",
-      "duration": "약 2개월"
+      "start": "19.03",
+      "end": "20.01",
+      "duration": "약 11개월"
     },
-    "description": "",
+    "description": "재직 중 메인 프로젝트였던 공사 플랫폼 모바일 어플리케이션입니다. 다양한 모바일 기기 반응형에 대한 많은 경험을 할 수 있었습니다",
     "color": [
       "#ff0000",
       "#ff00ff",
@@ -197,10 +197,8 @@
     ],
     "contribution": 90,
     "tool": [
-      "vue",
       "js",
-      "scss",
-      "git"
+      "css"
     ],
     "link": {
       "git": "", 
@@ -211,9 +209,9 @@
     "name": "barofactory",
     "image": "barofactory",
     "period": {
-      "start": "21.01.01",
-      "end": "21.01.01",
-      "duration": "약 2개월"
+      "start": "20.10",
+      "end": "ing",
+      "duration": "진행 중"
     },
     "description": "",
     "color": [
@@ -221,7 +219,7 @@
       "#ff00ff",
       "#ffff22"
     ],
-    "contribution": 90,
+    "contribution": 100,
     "tool": [
       "vue",
       "js",
@@ -230,16 +228,16 @@
     ],
     "link": {
       "git": "", 
-      "page": ""
+      "page": "https://barofactory.kr/login"
     }
   },
   "16": {
     "name": "yhsbearing",
     "image": "",
     "period": {
-      "start": "21.01.01",
-      "end": "21.01.01",
-      "duration": "약 2개월"
+      "start": "20.10",
+      "end": "ing",
+      "duration": "진행 중"
     },
     "description": "",
     "color": [
@@ -247,25 +245,23 @@
       "#ff00ff",
       "#ffff22"
     ],
-    "contribution": 90,
+    "contribution": 100,
     "tool": [
-      "vue",
       "js",
-      "scss",
-      "git"
+      "css"
     ],
     "link": {
       "git": "", 
-      "page": ""
+      "page": "https://yhsbearing.co.kr/"
     }
   },
   "17": {
     "name": "ums",
     "image": "",
     "period": {
-      "start": "21.01.01",
-      "end": "21.01.01",
-      "duration": "약 2개월"
+      "start": "21.11",
+      "end": "ing",
+      "duration": "약 6개월"
     },
     "description": "",
     "color": [
@@ -273,9 +269,8 @@
       "#ff00ff",
       "#ffff22"
     ],
-    "contribution": 90,
+    "contribution": 100,
     "tool": [
-      "vue",
       "js",
       "scss",
       "git"
@@ -289,18 +284,19 @@
     "name": "portfolio",
     "image": "portfolio",
     "period": {
-      "start": "21.01.01",
-      "end": "21.01.01",
-      "duration": "약 2개월"
+      "start": "22.01",
+      "end": "ing",
+      "duration": "진행 중"
     },
-    "description": "",
+    "description": "vue를 통해서 스스로 만들어본 포트폴리오 페이지입니다",
     "color": [
       "#ff0000",
       "#ff00ff",
       "#ffff22"
     ],
-    "contribution": 90,
+    "contribution": 100,
     "tool": [
+      "figma",
       "vue",
       "js",
       "scss",
@@ -308,7 +304,7 @@
     ],
     "link": {
       "git": "", 
-      "page": ""
+      "page": "/"
     }
   }
 }

@@ -1,0 +1,352 @@
+﻿@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+
+#contentW{
+	width: 1000px;
+	margin: 0px auto;
+	position:relative;
+}
+#top_category{
+	width: 1000px;
+	height: 30px;
+	position: relative;
+}
+#top_category>div>ul>li{
+	float: left;
+	width: 120px;
+	font-size: 12px;
+	line-height: 30px;
+	text-align: center;
+}
+#top_category>div>ul>li.top_category1>a{
+	display: block;
+	height: 30px;
+	width: 30px;
+	background: url(../images/home.png) no-repeat center;
+}
+#top_category>div>ul>li.top_category1{width: 30px;}
+#top_category>div>ul>li.top_category2{width: 120px;}
+#top_category>div>ul>li.category_next{width: 20px;}
+
+
+
+#main_content{
+	width: 1000px;
+	position: relative;
+}
+#content_real{
+	width:1000px;
+	float: left;
+	position: relative;
+}
+#RSW{
+	width: 700px;
+	float: left;
+}
+#RSdescrip{
+	margin-top: 50px;
+}
+	#RSdescrip>h2{margin-bottom: 20px;}
+	#RSdescrip>p{
+		width: 650px;
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+	.RSdescripB{font-weight: bold; font-size: 12px;}
+	
+	
+
+#reserv{
+	width: 700px;
+	margin: 30px 0px;
+}
+#topReserv{
+	padding: 15px 0px;
+	border-bottom: 2px solid black;
+}
+
+
+
+#contentReserv{padding: 20px 0px;}
+	#contentReserv>div{margin-bottom: 20px;}
+	
+	
+	
+#contentR1{
+	width: 700px;
+	height: 30px;
+}
+	#contentR1 input[type="text"]{
+		width: 180px;
+		height: 26px;
+	}
+	#contentR2 select{
+		width: 120px;
+		height: 30px;
+		margin-right: 10px;
+	}
+	#contentR2 input[type="text"]{
+		width: 200px;
+		height: 26px;
+	}
+	#contentR3 form{width: 500px;}
+
+	
+	
+#contentR2{
+	width: 700px;
+	height: 30px;
+}
+
+
+
+#contentR3{
+	width: 700px;
+	height: 30px;
+}
+	#contentR3 .contentR3FormW{
+		width: 450px;
+		height: 80px;
+		float: left;
+	}
+	#contentR3 input[type="radio"]{float: left; width: 15px; height: 30px; vertical-align: middle;}
+	#contentR3 label{ 
+		padding-left: 5px;
+		font-size: 14px;
+		letter-spacing: -1px;
+	}
+	.errorLabelW1{display: block; width: 155px; float: left; line-height: 30px;}
+	.errorLabelW2{display: block; width: 165px; float: left; line-height: 30px;}
+	.errorLabelW3{display: block; width: 115px; float: left; line-height: 30px;}
+
+
+
+#contentR4{width: 700px;}
+	#contentR4 form{
+		width: 500px;
+		float: left; 
+	}
+	#contentR4 form textarea{
+		display: block;
+		float: left;
+		width: 498px;
+		height: 180px;
+	}
+	
+	
+	
+#contentR5{
+	width: 700px;
+	height: 30px;
+}
+	#contentR5 form{
+		float: left;
+		width: 500px;
+		height: 30px;
+		line-height: 30px;
+	}
+	#contentR5 form input[type="date"]{
+		width: 150px; 
+		height: 26px; 
+		line-height: 26px; 
+		vertical-align: top; 
+		float: left;
+	}
+	#minute, #hour{
+		width: 80px; 
+		height: 30px; 
+		line-height: 30px; 
+		vertical-align: top;
+		margin-left: 20px;
+	}
+
+
+
+#contentR6{width: 700px;}
+	#contentR6 form{
+		float: left;
+		width: 500px;
+	}
+	#contentR6 form input[type="checkbox"]{
+		float: left;
+		width: 15px;
+		height: 30px;
+	}
+	#contentR6 div{
+		float: right;
+		display: block;
+		width: 500px;
+	}
+	#contentR6 div label{
+		float: left;
+		width: 475px;
+		line-height: 30px;
+		font-size: 14px;
+		padding-left: 10px;
+		letter-spacing: -1px;
+	}
+	#contentR6 div p{
+		display: block;
+		float: left;
+		line-height: 20px; 
+		margin-top: 20px;
+		margin-left: 20px;
+	}
+
+
+
+#submitBtn{border-top: 2px solid gray;}
+#submitBtn input{
+	float: right;
+	background: navy;
+	width: 160px;
+	height: 30px;
+	line-height: 30px;
+	color: white;
+	font-weight: bold;
+	margin-top: 20px;
+	border: none;
+}
+
+
+	
+#ReservFooter{
+	width: 700px;
+	padding-bottom: 20px;
+	margin-bottom: 50px;
+	border-top: 1px solid #b6b6b6;
+	border-bottom: 1px solid #b6b6b6;
+}
+	#ReservFooter>h4{
+		padding: 10px 10px;
+		background: #eaeaea;
+		color: #333333;
+		margin-bottom: 20px;
+	}
+	#ReservFooter div ul li{
+		padding-left: 20px;
+		font-size: 16px;
+		letter-spacing: -1px;
+		line-height: 30px;
+		background: url(../images/list_style.png) no-repeat 5px 6px;
+	}
+	#ReservFooter div ul li a{color: blue; text-decoration: underline;}
+	
+	
+	
+.formTitle{
+	width: 200px;
+	float: left;
+	line-height: 30px;
+	font-weight: bold;
+	background: white;
+}
+.PS{font-size: 12px;}
+
+	
+	
+	
+
+
+	
+	
+
+#content_sub_menu{
+	width: 250px;
+	float: right;
+	position: relative;
+}
+#quick_menu{
+	position: relative;
+	width: 250px;
+	height: 270px;
+	background: #f0f0f0;
+	font-size: 11px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+#quick_menu>h3{
+	font-size: 14px;
+	padding: 10px 5px 10px 10px;
+	color: #2b3853;
+}
+#quick_menu>div>div{
+	width: 250px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: #647492;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+#quick_menu>div>div>a{color: white;}
+#quick_menu>div>ul>li{
+	float:left;
+	width: 125px;
+	height: 23px;
+	line-height: 20px;
+	background: url(../images/bt_bg_8_20.png) no-repeat 110px 0px;
+}
+#quick_menu>div>ul>li:hover{background: url(../images/bt_bg_hover_8_20.png) no-repeat 110px 0px;}
+#quick_menu>div>ul>li>a{
+	padding-left: 10px;
+	font-weight: bold;
+	color: #7d8084;
+}
+#quickUnder1{
+	width: 250px;
+	background: #fbfbfb;
+	border-top: 1px solid #dbdbdb;
+	border-bottom: 1px solid #dbdbdb;
+}
+	#quickUnder1 div{
+		width: 240px;
+		margin: 0px auto;
+	}
+	
+	
+	
+#quickUnder2{
+	margin-top: 30px;
+	width: 250px;
+	background: #fbfbfb;
+	border-top: 1px solid #dbdbdb;
+	border-bottom: 1px solid #dbdbdb;
+}
+	#quickUnder2 div{
+		width: 250px;
+	}
+	#quickUnder2>div>h3{
+		display: block;
+		float: left;
+		width: 100px;
+		font-size: 15px;
+		padding-left: 3px;
+		line-height: 30px;
+	}
+	#quickUnder2>div>p.btbg{
+		width: 90px;
+		float: right;
+		font-size: 12px;
+		text-align: right;
+		padding-right: 15px;
+		line-height: 30px;
+		letter-spacing: -1px;
+		background: url(../images/bt_bg_8_20.png) no-repeat 95px 6px;
+	}
+	#popularCard1{
+		width: 250px;
+		text-align: center;
+		margin-top: 10px;
+	}
+	#popularCard1>p{font-size: 13px;}
+	#popularCard1>p:hover{text-decoration: underline;}
+	#popularCard2{
+		width: 250px;
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	#popularCard2>p{font-size: 13px;}
+	#popularCard2>p:hover{text-decoration: underline;}

@@ -165,6 +165,7 @@ export default {
 
           post.title = title.textContent;
           content_element.innerHTML = content.textContent;
+          this.$store.commit("assignTooltipTargets");
         });
       })
       .catch((error) => {

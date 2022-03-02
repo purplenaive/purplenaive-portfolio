@@ -40,6 +40,8 @@ export default {
       .then((repsonse) => {
         const instagram = this.instagram;
         instagram.data = repsonse.data.data;
+
+        this.$store.commit("assignTooltipTargets");
       })
       .catch((error) => {
         console.log(error);

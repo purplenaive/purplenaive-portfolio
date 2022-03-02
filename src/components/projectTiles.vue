@@ -21,23 +21,36 @@
         <i 
           v-for="tool in project.tool"
           :key="`tool-${tool}`"
-          class="icon"
+          class="icon tooltipBox"
           :class="`${tool}-outline`"
+          :data-tooltip="tool"
         ></i>
       </p>
       <p class="detail-info link-buttons">
-        <button class="button button-git">
+        <button 
+          class="button button-git"
+          :disabled="project.link.git == ''"
+        >
           <a :href="project.link.git">
-            <i class="icon git-fab"></i>
+            <i 
+              class="icon git-fab tooltipBox"
+              :data-tt-title="project.link.git != '' ? '' : '링크 비활성화'"
+              data-tooltip="프로젝트 깃 페이지로 이동합니다"
+            ></i>
           </a>
         </button>
-        <button class="button button-detail">
+        <button 
+          class="button button-detail"
+        >
           <a :href="`post/${project.id}`">
-            <i class="icon page-fab"></i>
+            <i 
+              class="icon page-fab tooltipBox"
+              data-tooltip="프로젝트 상세 설명 페이지로 이동합니다"
+            ></i>
           </a>
         </button>
         <button class="button button-page">
-          <a :href="project.link.page">
+          <a :href="project.link.page" target="_blank">
             페이지
           </a>
         </button>
@@ -193,8 +206,13 @@ export default {
         background-color: transparent;
 
         &:last-child { margin-right: 0; }
+
+        > a {
+          display: block;
+        }
       }
       .button-page {
+        padding-top: 1px;
         border-radius: 20px;
         background-color: $black;
 

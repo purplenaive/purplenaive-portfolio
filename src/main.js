@@ -18,7 +18,7 @@ const store = createStore({
   mutations: {
     assignTooltipTargets(state) {
       const targets = document.querySelectorAll(".tooltipBox");
-      console.log("tooltip mutations run");
+
       state.tooltip_targets = targets;
     }
   },

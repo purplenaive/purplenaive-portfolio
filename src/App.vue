@@ -3,7 +3,7 @@
  
   <router-view/>
 
-  <tooltip></tooltip>
+  <tooltip :target="tooltip_targets"></tooltip>
 </template>
 
 <script>
@@ -19,6 +19,11 @@ export default {
     return {
     };
   }, 
+  computed: {
+    tooltip_targets() {
+      return this.$store.getters.getTooltipTargets;
+    },
+  },
   methods: {
   },
   mounted() {
