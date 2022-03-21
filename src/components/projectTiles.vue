@@ -104,6 +104,7 @@ export default {
             project.trimed = data;
             project.show = true;
             localStorage.setItem("project", JSON.stringify(project.trimed));
+            console.log(project.trimed);
           })
         })
         .catch(function(error) {

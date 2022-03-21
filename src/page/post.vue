@@ -142,7 +142,7 @@ export default {
 
       if(!data) return "";
 
-      data.filter((value) => value.id == this.id );
+      data.filter(value => value.id == this.id );
       return data[0];
     }
   },
