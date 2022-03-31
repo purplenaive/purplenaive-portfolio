@@ -2,15 +2,21 @@
   <article id="profile-tile" class="tile work-profile scrollNav">
     <img src="@/assets/image/profile.jpg" alt="카메라를 들고 바다를 찍고 있는 여성" class="profile-image">
   </article>
+    <!-- v-for="insta, index in instagram.data.slice(0, 8)" -->
+    <!-- :key="`instagram-${insta.id}`" -->
   <article 
-    v-for="insta, index in instagram.data.slice(0, 8)"
-    :key="`instagram-${insta.id}`"
+    v-for="page, index in gallery.data"
+    :key="`gallery-${index}`"
     :id="index == 0 ? 'work-tile' : ''"
     class="tile tile-work"
     :class="{'scrollNav': index == 0,}"
   >
-    <img 
+    <!-- <img 
       :src="insta.media_url" alt="instagram image" class="instagram-image"
+      @load="index == 1 ? $emit('loaded') : ''"
+    > -->
+    <img 
+      :src="page.cover.file.url" alt="cover image" class="instagram-image"
       @load="index == 1 ? $emit('loaded') : ''"
     >
   </article>
@@ -24,6 +30,9 @@ export default {
   data() {
     return {
       instagram: {
+        data: [],
+      },
+      gallery: {
         data: [],
       }
     }
@@ -46,10 +55,45 @@ export default {
       .catch((error) => {
         console.log(error);
       })
-    }
+    },
+    getNotionGallery() {
+      const GALLERY_TOKEN = "914c534dd5514aac9c296bc057362f4d";
+      const ACCESS_KEY = "secret_QEaI6MPUF0jvojsltXj9lCmCcjfJznR1xwIUURiubXc"
+
+      const options = {
+        method: "POST",
+        url: `https://cors-anywhere.herokuapp.com/https://api.notion.com/v1/databases/${GALLERY_TOKEN}/query`,
+        headers: {
+          Accept: "application/json",
+          "Notion-Version": "2022-02-22",
+          Authorization: `Bearer ${ACCESS_KEY}`,
+        },
+        data: {page_size: 10}
+      };
+
+      axios.request(options).then((response) => {
+        console.log(response.data);
+        this.trimGalleryData(response.data.results);
+      }).catch(function(error) {
+        console.log(error);
+      })
+
+    },
+    trimGalleryData(data) {
+      const trim = data.map(function(value) {
+        return {
+          title: value.properties["이름"].title[0].plain_text,
+          cover: value.cover,
+          url: value.url,
+        };
+      });
+      this.gallery.data = trim;
+      console.log(trim);
+    },
   },
   mounted() {
-    this.getInstagram();
+    // this.getInstagram();
+    this.getNotionGallery();
   },
 }
 </script>
