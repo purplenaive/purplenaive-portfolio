@@ -63,6 +63,7 @@ export default {
   margin-right: 200px;
   box-sizing: content-box;
   position: relative;
+  z-index: 0;
 }
 
 #main {
@@ -79,17 +80,17 @@ export default {
   grid-template-rows: repeat(3, 200px);
   grid-auto-flow: column dense;
 
-  $resume-template-1: "memoji memoji license career";
-  $resume-template-2: "tools introduce introduce career";
-  $resume-template-3: "tools introduce introduce career";
+  $resume-template-1: "memoji  memoji     license    career";
+  $resume-template-2: "tools   introduce  introduce  career";
+  $resume-template-3: "tools   introduce  introduce  career";
 
-  $project-template-1: "barofactory yhsbearing portfolio portfolio cafe24 shinhan";
-  $project-template-2: "barofactory ums pd04 paik cafe24 xiaomi";
-  $project-template-3: "work-profile work-profile pd04 elle yg-stage maeil";
+  $project-template-1: "barofactory   barohome      barohome   pd04       paik  cafe24    xiaomi";
+  $project-template-2: "barofactory   yhsbearing    umc        pd04       elle  cafe24    shinhan";
+  $project-template-3: "work-profile  work-profile  portfolio  portfolio  elle  yg-stage  maeil";
   
-  $work-template-1: "work19 work19 work20 work25";
-  $work-template-2: "work22 work21 work21 work25";
-  $work-template-3: "work23 work23 work24 work26";
+  $work-template-1: "work19  work19  work20  work25";
+  $work-template-2: "work22  work21  work21  work25";
+  $work-template-3: "work23  work23  work24  work26";
 
   grid-template-areas:  
   "#{$resume-template-1} #{$project-template-1} #{$work-template-1}"

@@ -2,8 +2,6 @@
   <article id="profile-tile" class="tile work-profile scrollNav">
     <img src="@/assets/image/profile.jpg" alt="카메라를 들고 바다를 찍고 있는 여성" class="profile-image">
   </article>
-    <!-- v-for="insta, index in instagram.data.slice(0, 8)" -->
-    <!-- :key="`instagram-${insta.id}`" -->
   <article 
     v-for="page, index in gallery.data"
     :key="`gallery-${index}`"
@@ -11,10 +9,6 @@
     class="tile tile-work"
     :class="{'scrollNav': index == 0,}"
   >
-    <!-- <img 
-      :src="insta.media_url" alt="instagram image" class="instagram-image"
-      @load="index == 1 ? $emit('loaded') : ''"
-    > -->
     <img 
       :src="page.cover.file.url" alt="cover image" class="instagram-image"
       @load="index == 1 ? $emit('loaded') : ''"
@@ -72,7 +66,6 @@ export default {
       };
 
       axios.request(options).then((response) => {
-        console.log(response.data);
         this.trimGalleryData(response.data.results);
       }).catch(function(error) {
         console.log(error);
@@ -132,6 +125,8 @@ export default {
     .instagram-image {
       @include tile(3, 2);
 
+      display: block;
+      max-width: unset;
       border-radius: 24px;
       position: absolute;
       left: 50%;

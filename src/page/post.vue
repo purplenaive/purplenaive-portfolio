@@ -17,7 +17,7 @@
 
       <div class="post-content">
 
-        <header class="post__header">
+        <!-- <header class="post__header">
             <h2 class="post-name" v-html="post.title"></h2>
 
             <div class="project-info">
@@ -55,13 +55,15 @@
                 {{project.description}}
               </p>
             </div>
-        </header>
+        </header> -->
 
-        <div class="content-text">
+        <!-- <div class="content-text">
           <page-list v-if="page_list.active"></page-list>
           <pre id="content-pre" class="content-pre">
           </pre>
-        </div>
+        </div> -->
+
+
       </div>
 
     </section>
@@ -69,16 +71,18 @@
 </template>
 
 <script>
-import VueApexCharts from "vue3-apexcharts"
+// import VueApexCharts from "vue3-apexcharts"
 import axios from "axios";
 import colorBackground from "@/components/background.vue";
-import pageList from "@/components/pageList.vue";
+// import pageList from "@/components/pageList.vue";
 
 export default {
   name: "postTemplate",
   components: {
-    colorBackground, pageList,
-    apexchart: VueApexCharts,
+    colorBackground, 
+    // pageList,
+    // apexchart: 
+    // VueApexCharts,
   },
   props: [
     "id"
@@ -137,14 +141,14 @@ export default {
     access_key() {
       return this.$store.state.tistory_access_key;
     },
-    project() {
-      let data = JSON.parse(localStorage.getItem("project"));
+    // project() {
+    //   let data = JSON.parse(localStorage.getItem("project"));
 
-      if(!data) return "";
+    //   if(!data) return "";
 
-      data.filter(value => value.id == this.id );
-      return data[0];
-    }
+    //   data.filter(value => value.id == this.id );
+    //   return data[0];
+    // }
   },
   methods: {
     getPostContent() {
@@ -172,10 +176,42 @@ export default {
         console.log(error);
       })
     },
+    trimData(data) {
+      console.log(data);
+      this.post.data = data.map((value) => {
+        return {
+          id: value.id,
+          type: value.type,
+        }
+      });
+      console.log(this.post.data);
+    },
   },
   mounted() {
-    this.getPostContent();
-    console.log(this.project);
+    // this.getPostContent();
+    // console.log(this.project);
+
+    const id = this.id;
+    const ACCESS_KEY = "secret_QEaI6MPUF0jvojsltXj9lCmCcjfJznR1xwIUURiubXc"
+
+    const options = {
+      method: "GET",
+      url: `https://cors-anywhere.herokuapp.com/https://api.notion.com/v1/blocks/${id}/children?page_size=100`,
+      headers: {
+        Acceps: "application/json",
+        "Notion-Version": "2022-02-22",
+        Authorization: `Bearer ${ACCESS_KEY}`
+      }
+    };
+
+    axios.request(options)
+    .then(response => {
+      console.log(response);
+      this.trimData(response.data.results);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
   }
 }
 </script>

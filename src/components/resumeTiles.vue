@@ -178,7 +178,7 @@ export default {
         },
         {
           name: "javascript",
-          icon: "js-flat",
+          icon: "javascript-flat",
           description: "dom 조작 및 간단한 스크립트 작성이 가능하며, 업무에 활용이 가능합니다",
         },
         {
@@ -213,7 +213,7 @@ export default {
         },
         {
           name: "photoshop",
-          icon: "ps-flat",
+          icon: "photoshop-flat",
           description: "간단한 사진 편집등 어느 정도 사용이 가능합니다",
         },
         {

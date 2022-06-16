@@ -32,7 +32,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~@/assets/css/global.scss";
 
 html {
   width: 100%;
@@ -51,5 +50,6 @@ body {
 #app {
   width: auto;
   height: 100%;
+  font-family: "pretendard";
 }
 </style>
