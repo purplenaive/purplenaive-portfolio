@@ -35,28 +35,28 @@ export default {
     "loaded"
   ],
   methods: {
-    getInstagram() {
-      const user_id = this.$store.state.instagram_user_id;
-      const access_token = this.$store.state.instagram_long_lived_access_token;
+    // getInstagram() {
+    //   const user_id = this.$store.state.instagram_user_id;
+    //   const access_token = this.$store.state.instagram_long_lived_access_token;
 
-      axios.get("https://graph.instagram.com/" + user_id + "/media?fields=id,media_type,media_url,permalink,thumbnail_url,username,caption,timestamp&access_token=" + access_token)
-      .then((repsonse) => {
-        const instagram = this.instagram;
-        instagram.data = repsonse.data.data;
+    //   axios.get("https://graph.instagram.com/" + user_id + "/media?fields=id,media_type,media_url,permalink,thumbnail_url,username,caption,timestamp&access_token=" + access_token)
+    //   .then((repsonse) => {
+    //     const instagram = this.instagram;
+    //     instagram.data = repsonse.data.data;
 
-        this.$store.commit("assignTooltipTargets");
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-    },
+    //     this.$store.commit("assignTooltipTargets");
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   })
+    // },
     getNotionGallery() {
       const GALLERY_TOKEN = "914c534dd5514aac9c296bc057362f4d";
       const ACCESS_KEY = "secret_QEaI6MPUF0jvojsltXj9lCmCcjfJznR1xwIUURiubXc"
 
       const options = {
         method: "POST",
-        url: `https://cors-anywhere.herokuapp.com/https://api.notion.com/v1/databases/${GALLERY_TOKEN}/query`,
+        url: `https://corsproxy.io/?https://api.notion.com/v1/databases/${GALLERY_TOKEN}/query`,
         headers: {
           Accept: "application/json",
           "Notion-Version": "2022-02-22",
@@ -64,7 +64,7 @@ export default {
         },
         data: {page_size: 10}
       };
-
+      
       axios.request(options).then((response) => {
         this.trimGalleryData(response.data.results);
       }).catch(function(error) {
@@ -81,11 +81,10 @@ export default {
         };
       });
       this.gallery.data = trim;
-      console.log(trim);
+      console.log("work response", trim);
     },
   },
   mounted() {
-    // this.getInstagram();
     this.getNotionGallery();
   },
 }
@@ -105,13 +104,13 @@ export default {
   &:nth-child(odd) {
     @include tile(2, 1);
   }
-
   &:nth-child(even) {
     @include tile(1, 1);
   }
-  &:nth-child(25) {
-    @include tile(1, 2);
-  }
+
+  // &:nth-child(25) {
+  //   @include tile(1, 2);
+  // }
 
   @for $i from 1 to 30 {
     &:nth-child(#{$i}) {

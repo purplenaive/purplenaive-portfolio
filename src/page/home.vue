@@ -54,9 +54,8 @@ export default {
 @import "~@/assets/css/global.scss";
 
 #home {
-  @include flex(column, nowrap, center, flex-start);
+  @include flex(true, column, nowrap, center, flex-start);
 
-  display: inline-flex;
   width: auto;
   height: 100%;
   padding: 0 400px 0 200px;
@@ -84,9 +83,9 @@ export default {
   $resume-template-2: "tools   introduce  introduce  career";
   $resume-template-3: "tools   introduce  introduce  career";
 
-  $project-template-1: "barofactory   barohome      barohome   pd04       paik  cafe24    xiaomi";
-  $project-template-2: "barofactory   yhsbearing    umc        pd04       elle  cafe24    shinhan";
-  $project-template-3: "work-profile  work-profile  portfolio  portfolio  elle  yg-stage  maeil";
+  $project-template-1: "kinderfest    barofactory   barohome  barohome    pd04       paik  cafe24    xiaomi";
+  $project-template-2: "kinderfest    barofactory   umc       yhsbearing  pd04       elle  cafe24    shinhan";
+  $project-template-3: "work-profile  work-profile  umc       portfolio   portfolio  elle  yg-stage  maeil";
   
   $work-template-1: "work19  work19  work20  work25";
   $work-template-2: "work22  work21  work21  work25";

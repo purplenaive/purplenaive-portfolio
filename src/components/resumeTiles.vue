@@ -299,8 +299,7 @@ export default {
   grid-area: memoji;
   
   .tile__content {
-    @include flex(row, nowrap, center, center);
-
+    @include flex(false, row, nowrap, center, center);
   }
 
   .memoji {
@@ -332,7 +331,7 @@ export default {
   grid-area: tools;
 
   .tile__content {
-    @include flex(column, nowrap, center, center);
+    @include flex(false, column, nowrap, center, center);
   }
 
   .basic-info-list {
@@ -369,7 +368,7 @@ export default {
     background-color: $tile-yellow;
   }
   .tile__content {
-    @include flex(column, nowrap, center, flex-start);
+    @include flex(false, column, nowrap, center, flex-start);
   }
   .license__item {
     margin-bottom: 16px;
@@ -399,7 +398,7 @@ export default {
     margin-right: 8px;
   }
   .tile__content {
-    @include flex(column, nowrap, center, stretch);
+    @include flex(false, column, nowrap, center, stretch);
   }
   .introduce-paragraph {
     margin-bottom: 12px;
@@ -418,7 +417,7 @@ export default {
   grid-area: career;
 
   .tile__content {
-    @include flex(column, nowrap, flex-start, stretch);
+    @include flex(false, column, nowrap, flex-start, stretch);
   }
   .career-list {
     padding-left: 12px;

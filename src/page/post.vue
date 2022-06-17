@@ -243,7 +243,7 @@ export default {
   }
 
   .show-page-list-button {
-    @include flex(row, nowrap, flex-start, center);
+    @include flex(false, row, nowrap, flex-start, center);
 
     position: absolute;
     top: 0;
@@ -300,7 +300,8 @@ export default {
   }
 
   .post__header {
-    @include flex(row, wrap, stretch, flex-start);
+    @include flex(false, row, wrap, stretch, flex-start);
+
     position: relative;
 
     .post-name {
@@ -312,7 +313,7 @@ export default {
     }
 
     .project-info {
-      @include flex(row, nowrap, flex-end, center);
+      @include flex(false, row, nowrap, flex-end, center);
 
       flex: 0 0 auto;
 
@@ -328,7 +329,7 @@ export default {
         margin-right: 12px;
 
         .info-content {
-          @include flex(row, nowrap, center, center);
+          @include flex(false, row, nowrap, center, center);
         }
         .colorchip {
           display: inline-block;

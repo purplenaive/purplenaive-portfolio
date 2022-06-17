@@ -30,7 +30,7 @@ export default {
   background-color: #FFFAF2;
 
   .footer__inner {
-    @include flex(row, nowrap, space-between, center);
+    @include flex(false, row, nowrap, space-between, center);
 
     width: 632px;
     position: absolute;

@@ -25,14 +25,14 @@ export default {
 @import "~@/assets/css/global.scss";
 
 .sticky-contact {
-  @include flex(row, nowrap, flex-start, center);
+  @include flex(false, row, nowrap, flex-start, center);
 
   position: sticky;
   left: 80px;
   margin-left: -4px;
 
   .contact__item {
-    @include flex(row, nowrap, flex-start, center);
+    @include flex(false, row, nowrap, flex-start, center);
 
     margin-right: 8px;
     padding: 8px 4px;

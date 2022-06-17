@@ -1,7 +1,7 @@
 @import "~@/assets/css/icon";
 
-@mixin flex($direction, $wrap, $justify, $align) {
-  display: flex;
+@mixin flex($inline, $direction, $wrap, $justify, $align) {
+  display: if($inline, inline-flex, flex);
   flex-flow: $direction $wrap;
   justify-content: $justify;
   align-items: $align;
@@ -23,10 +23,10 @@
   }
 
   &.tile--has-header {
-    @include flex(column, nowrap, stretch, stretch);
+    @include flex(false, column, nowrap, stretch, stretch);
 
     .tile__title {
-      @include flex(row, nowrap, center, center);
+      @include flex(false, row, nowrap, center, center);
       
       height: 48px;
       flex: 0 0 auto;

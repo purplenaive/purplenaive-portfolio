@@ -4,7 +4,6 @@
     :key="`project-${project.id}`"
     class="tile tile-project"
     :class="`tile-${project.name}`"
-    :style="{gridArea: project.name }"
   >
     <h3 class="project__title">
       <span class="project-index">{{index < 10 ? "0" + index: index}}-{{project.id.substr(0, 2)}}</span>
@@ -93,7 +92,7 @@ export default {
 
       const options = {
         method: "POST",
-        url: `https://cors-anywhere.herokuapp.com/https://api.notion.com/v1/databases/${PROJECT_TOKEN}/query`,
+        url: `https://corsproxy.io/?https://api.notion.com/v1/databases/${PROJECT_TOKEN}/query`,
         headers: {
           Accept: "application/json",
           "Notion-Version": "2022-02-22",
@@ -150,7 +149,7 @@ export default {
 
 .tile {
   @include glassmorphism($padding: false);
-  @include flex(column, nowrap, space-between, center);
+  @include flex(false, column, nowrap, space-between, center);
 
   padding: 24px;
   box-sizing: border-box;
@@ -168,7 +167,7 @@ export default {
   }
 
   .project__title {
-    @include flex(column, nowrap, flex-start, center);
+    @include flex(false, column, nowrap, flex-start, center);
 
     margin: 0;
     font-size: $font-regular;
@@ -196,7 +195,7 @@ export default {
     }
   }
   .tile__content {
-    @include flex(column, nowrap, center, center);
+    @include flex(false, column, nowrap, center, center);
 
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -206,12 +205,12 @@ export default {
     color: $font-gray;
 
     &.tools {
-      @include flex(row, nowrap, center, center);
+      @include flex(false, row, nowrap, center, center);
 
       margin-top: 4px;
     }
     &.link-buttons {
-      @include flex(row, nowrap, center, center);
+      @include flex(false, row, nowrap, center, center);
 
       margin-top: 12px;
 
@@ -243,7 +242,7 @@ export default {
     }
   }
   .project-tag {
-    @include flex(row, nowrap, center, center);
+    @include flex(false, row, nowrap, center, center);
 
     .tag__item {
       font-size: $font-xs;
@@ -258,61 +257,45 @@ export default {
 }
 
 
+$tile-setting: (
+  ( "name": kinderfest, "size": (1, 2), "color": $tile-red, ),
+  ( "name": barofactory, "size": (1, 2), "color": $tile-blue, ),
+  ( "name": barohome, "size": (2, 1), "color": "", ),
+  ( "name": yhsbearing, "size": (1, 1), "color": "", ),
+  ( "name": umc, "size": (1, 2), "color": "", ),
+  ( "name": portfolio, "size": (2, 1), "color": $tile-purple, ),
+  ( "name": pd04, "size": (1, 2), "color": $tile-yellow, ),
+  ( "name": paik, "size": (1, 1), "color": "", ),
+  ( "name": elle, "size": (1, 2), "color": "", ),
+  ( "name": cafe24, "size": (1, 2), "color": $tile-red, ),
+  ( "name": yg-stage, "size": (1, 1), "color": "", ),
+  ( "name": shinhan, "size": (1, 1), "color": "", ),
+  ( "name": xiaomi, "size": (1, 1), "color": "", ),
+  ( "name": maeil, "size": (1, 1), "color": $tile-blue, ),
+);
 
-.tile-barofactory {
-  @include tile(1, 2);
+@each $tile in $tile-setting {
+  $name: map-get($tile, "name");
+  $size: map-get($tile, "size");
+  $width: nth($size, 1);
+  $height: nth($size, 2);
+  $color: map-get($tile, "color");
 
-  background-color: $tile-blue;
+  .tile-#{$name} {
+    @include tile($width, $height);
+
+    grid-area: $name;
+    background-color: if($color, $color, inherit);
+  }
 }
-.tile-yhsbearing {
-  @include tile(1, 1);
-}
-.tile-umc {
-  @include tile(1, 1);
-}
+
 .tile-portfolio {
-  @include tile(2, 1);
-
-  background-color: $tile-purple;
 
   .project__thumbnail {
     padding-top: 25px;
   }
 }
-.tile-pd04 {
-  @include tile(1, 2);
-
-  background-color: $tile-yellow;
-}
-.tile-paik {
-  @include tile(1, 1);
-
-}
-.tile-elle {
-  @include tile(1, 2);
-
-}
-.tile-cafe24 {
-  @include tile(1, 2);
-
-  background-color: $tile-red;
-}
-.tile-yg-stage {
-  @include tile(1, 1);
-
-}
-.tile-shinhan {
-  @include tile(1, 1);
-
-}
-.tile-xiaomi {
-  @include tile(1, 1);
-
-}
 .tile-maeil {
-  @include tile(1, 1);
-
-  background-color: $tile-blue;
 
   .project__thumbnail {
     margin: 15px 0 0 -10px;

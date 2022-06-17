@@ -82,7 +82,7 @@ export default {
 @import "~@/assets/css/global.scss";
 
 .tooltip {
-  @include flex(column, nowrap, center, center);
+  @include flex(false, column, nowrap, center, center);
 
   position: fixed;
   top: 200px;
