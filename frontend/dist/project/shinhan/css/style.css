@@ -1,0 +1,370 @@
+﻿@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+
+#main_imgW{
+	width: 100%;
+	height: 340px;
+	background: #197aad;
+	position: relative;
+}
+#page_icon{opacity: 0.7;}
+#page_left{
+	float: left;
+	position: absolute;
+	margin-top: -30px;
+	top: 50%;
+	left: 150px;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	border: 1px solid white;
+	background: url(../images/page_left.png) no-repeat;
+	z-index: 99;
+}
+#page_left:hover{
+	background-color: #166a97;
+	background-image: url(../images/page_left_hover.png);
+	border: 1px solid #154e6d;
+}
+#page_right{
+	float: left;
+	position: absolute;
+	margin-top: -30px;
+	top: 50%;
+	right: 150px;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	border: 1px solid white;
+	background: url(../images/page_right.png) no-repeat;
+	z-index: 99;
+}
+#page_right:hover{
+	background-color: #166a97;
+	background-image: url(../images/page_right_hover.png);
+	border: 1px solid #154e6d;
+}
+#main_img{
+	width: 1000px;
+	height: 340px;
+	margin: 0px auto;
+	background: url(../images/card_reco_img.jpg) no-repeat;
+	background-position: 10% 7%;
+	position: relative;
+}
+#event_img{
+	width: 666px;
+	height: 340px;
+	float: left;
+	position: relative;
+}
+#more_info_button{
+	width: 120px;
+	height: 30px;
+	background: #197aad;
+	border-radius: 20px;
+	border: 1px solid white;
+	z-index: 99;
+	line-height: 30px;
+	position: absolute;
+	top: 230px;
+	left: 35px;
+}
+#more_info_button>a{
+	display: block;
+	width: 90%;
+	height: 30px;
+	margin: 0px auto;
+	color: white;
+	text-shadow: 1px 1px 3px gray;
+	font-weight: bold;
+	text-align: center;
+	font-size: 14px;
+	font-family: 'Nanum Gothic', serif;
+}
+#now_ing_event{
+	position: absolute;
+	bottom: 20px;
+	right: 30px;
+}
+#event_menu{
+	width: 334px;
+	height: 340px;
+	float: left;
+	background: #166a97;
+}
+#event_menu>div{
+	width: 240px;
+	height: 330px;
+	margin: 0px auto;
+	padding-top: 10px;
+}
+#event_menu>div>ul>li{
+	float: left;
+	width: 120px;
+	height: 80px;
+	font-size: 13px;
+	text-align: center;
+	font-family: 'Nanum Gothic', serif;
+	line-height: 130px;
+	opacity: 0.7;
+}
+#event_menu>div>ul>li:hover{opacity: 1;}
+#event_menu>div>ul>li>a{
+	color: white;
+}
+.event_menu1{background: url(../images/clipboard.png) no-repeat; background-position: 44px 12px;}
+.event_menu2{background: url(../images/user.png) no-repeat; background-position: 44px 12px;}
+.event_menu3{background: url(../images/clipboards2.png) no-repeat; background-position: 44px 12px;}
+.event_menu4{background: url(../images/calendar.png) no-repeat; background-position: 44px 12px;}
+.event_menu5{background: url(../images/limit_find.png) no-repeat; background-position: 44px 12px;}
+.event_menu6{background: url(../images/payment.png) no-repeat; background-position: 44px 12px;}
+.event_menu7{background: url(../images/online.png) no-repeat; background-position: 44px 12px;}
+.event_menu8{background: url(../images/point.png) no-repeat; background-position: 44px 12px;}
+
+
+
+#contentW{
+	background: #f7f7f7; 
+} 
+#main_content{
+	width: 1000px;
+	margin: 0px auto;
+	position: relative;
+	padding-bottom: 100px;
+}
+#card_reco_img{
+	float: left;
+	width: 664px;
+	height: 280px;
+	border-left: 1px solid #dbdbdb;
+	border-right: 1px solid #dbdbdb;
+}
+.card_reco_img_menu{
+	width: 470px;
+	height: 50px;
+	margin: 0px auto;
+	margin-top: 20px;
+	line-height: 45px;
+}
+.card_reco_img_menu ul li{
+	float: left;
+	text-align: center;
+	height: 48px;
+	border-bottom: 2px solid lightgray;
+}
+.card_reco_img_menu ul li a{
+	font-weight: bold; 
+	color: #646464;
+}
+.card_reco_img_menu ul li:hover{
+	height: 45px;
+	border-bottom: 5px solid #197aad;
+}
+.card_reco_img_menu ul li:hover a{
+	color: #197aad;
+	font-weight: bold;
+}
+.reco_img_menu1{width: 70px;}
+.reco_img_menu2{width: 90px;}
+.reco_img_menu3{width: 170px;}
+#card_imgW{
+	width: 548px;
+	height: 134px;
+	margin: 20px auto;
+}
+#card_imgW>div{
+	width: 214px;
+	height: 134px;
+	float: left;
+	margin: 0px 30px;
+}
+#card_imgW>div>div{
+	width: 180px;
+	height: 110px;
+	padding: 10px;
+	margin: 2px auto;
+	text-align: center;
+	font-size: 14px;
+}
+#card_imgW>div>div>h3{margin-bottom: 10px;}
+#card_imgW>div>div>div{margin-top: 10px;}
+.card_reco_button1{
+	background: white;
+	border: 1px solid #dbdbdb;
+	width: 80px;
+	height: 30px;
+	line-height: 20px;
+	font-size: 12px;
+	font-family: 'Nanum Gothic', serif;
+}
+.card_reco_button2{
+	background: #197aad;
+	border: none;
+	width: 82px;
+	height: 32px;
+	line-height: 20px;
+	color: white;
+	font-size: 12px;
+	font-family: 'Nanum Gothic', serif;
+}
+#card_imgW div img{
+	position: absolute;
+	z-index: 999;
+	transition-property: opacity;
+	transition-duration: 0.7s;
+}
+#card_imgW div img:hover{opacity: 0;}
+#card_reco_menu{
+	float: left;
+	width: 333px;
+	height: 280px;
+	background: #f7f7f7;
+	border-right: 1px solid #dbdbdb;
+}
+#card_reco_menu ul{
+	width: 265px;
+	height: 250px;
+	margin: 20px auto;
+	text-align: left;
+	font-family: 'Nanum Gothic', serif;
+}
+#card_reco_menu ul li{
+	height: 49px;
+	font-size: 16px;
+	border-bottom: 1px solid #dbdbdb;
+	line-height: 50px;
+	background: url(../images/bt_bg.png) no-repeat right;
+}
+.reco_menuE{border-bottom: none !important;}
+#card_reco_menu ul li:hover{
+	background: url(../images/bt_bg_hover.png) no-repeat right;
+}
+#card_reco_menu ul li a{font-weight: 700; color: #444444;}
+#card_reco_menu ul li:hover a{color: black;}
+#sixMenu{
+	width: 998px; 
+	height: 418px;
+	border: 1px solid #dbdbdb;
+	font-family: 'Nanum Gothic', serif;
+	position: relative;
+}
+#sixMenu div div{
+	width: 80%;
+	height: 80%;
+	margin: 10% auto;
+	line-height: 30px;
+}
+#sixMenu div div ul{ margin-top: 20px;}
+#sixMenu div div li{
+	line-height: 20px;
+	width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#sixMenu div div a{
+	font-size: 14px;
+	color: #666666;
+}
+.sixMenu1{
+	width: 332px;
+	height: 209px;
+	float: left;
+	background: white;
+	border-right: 1px solid #dbdbdb;
+}
+.sixMenu2{
+	width: 332px;
+	height: 209px;
+	float: left;
+	background: white;
+}
+.sixMenu3{
+	width: 332px;
+	height: 208px;
+	float: left;
+	background: white;
+	border-right: 1px solid #dbdbdb;
+	border-bottom: 1px solid #dbdbdb;
+}
+.sixMenu4{
+	width: 332px;
+	height: 208px;
+	float: left;
+	background: white;
+	border-bottom: 1px solid #dbdbdb;
+}
+.fan_six{
+	background-image: url(../images/FANbg.png);
+	background-repeat: no-repeat;
+	background-position: 95% 90%;
+}
+.fan_six li{background: url(../images/bt_bg_8_20.png) no-repeat right;}
+.fan_six li:hover{background: url(../images/bt_bg_hover_8_20.png) no-repeat right;}
+.fan_six div ul li:hover a{color: black !important;}
+.kum_six{
+	background-image: url(../images/kumbg.png);
+	background-repeat: no-repeat;
+	background-position: 90% 90%;
+}
+.kum_six li{
+	width: 180px !important;
+	background: url(../images/bt_bg_8_20.png) no-repeat right;}
+.kum_six li:hover{background: url(../images/bt_bg_hover_8_20.png) no-repeat right;}
+.kum_six div ul li:hover a{color: black !important;}
+.allthat_six{
+	background-image: url(../images/allthatbg.png);
+	background-repeat: no-repeat;
+	background-position: 90% 90%;
+}
+.protect_six{
+	background-image: url(../images/protectbg.png);
+	background-repeat: no-repeat;
+	background-position: 93% 90%;
+}
+.poll_six{
+	background-image: url(../images/pollbg.png);
+	background-repeat: no-repeat;
+	background-position: 90% 90%;
+}
+.notice_six h4{background: url(../images/bt_bg_14_35.png) no-repeat right; }
+.color_gray{color: gray; font-weight: 400;}
+.overflowS{text-overflow: ellipsis;}
+.overflowS:hover{text-decoration: underline;}
+
+
+#floatButtonW{
+	position: absolute;
+	background-color: gray;
+	background-image: url(../images/remote_support.png);
+	background-repeat: no-repeat;
+	background-position: 22.5px 15px;
+	width: 90px;
+	height: 90px;
+	border-radius: 50px;
+	float: left;
+	top: 0px;
+	right: -150px;
+	z-index: 999;
+	border: 3px solid gray;
+}
+#floatButtonW a{
+	font-family: 'Nanum Gothic', serif;
+	text-align: center;
+	line-height: 145px;
+	font-size: 11px;
+	font-weight: bold;
+	color: white;
+}
+#floatButtonW:hover{
+	background-color: white;
+	background-image: url(../images/remote_support_hover.png);
+	background-repeat: no-repeat;
+	background-position: 22.5px 15px;
+	border: 3px solid lightgray;
+}
+#floatButtonW:hover a{
+	color: #7a7a7a;
+}
+
+

@@ -1,0 +1,413 @@
+﻿@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+#DeepDream100{
+	width: 100%;
+	float: left;
+	position: absolute;
+	top: 280px;
+	left: 0px;
+	background: #f3f4f6;
+	z-index: 9;
+	padding: 50px 0px;
+	font-family: "Nanum Gothic", serif;
+}
+#DeepDream100>div{
+	width: 650px;
+	margin: 0px auto;
+}
+#DeepDream100>div div{
+	text-align: center;
+}
+#DeepDream100 h1{margin-bottom: 10px;}
+#DeepDreamImgW{margin-top: 30px;}
+.DeepDreamImg{
+	float: left;
+	width: 250px; 
+	height: 150px; 
+	position: relative;
+}
+.DeepDreamImg>img{
+	width: 95%;
+	border-radius: 11px;
+	position: absolute;
+	top: 0;
+	left: 6px;
+}
+.DeepDreamImgD{
+	float: left;
+	width: 400px;
+	height: 150px;
+}
+.DeepDreamImgD>p{
+	height: 30px;
+	line-height: 30px;
+	text-align: left;
+	font-size: 13px;
+	letter-spacing: -1px;
+}
+
+
+
+/* jqueryyyyyyyyyyyyyyyyyyyyyyyyyyyyyy 설정 */
+
+.SDslide{display: none;}
+
+/* jqueryyyyyyyyyyyyyyyyyyyyyyyyyyyyyy 설정 */
+
+
+
+.DeepDreamImgD>p>img{margin-right: 10px;}
+.DDtag{
+	float: left;
+	display: block;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	margin-left: 20px;
+	font-weight: bold;
+	font-size: 15px;
+}
+.DDtag1{
+	float: left;
+	display: block;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 10px;
+	font-weight: bold;
+	font-size: 15px;
+}
+.DDtagE{
+	width: 300px;
+	float: left;
+	line-height: 20px;
+	margin-top: 5px;
+}
+#DeepDreamBorder{
+	float: left;
+	width: 650px;
+	height: 30px;
+	padding: 10px 0px;
+	margin-top: 20px;
+	border-top: 1px solid gray;
+}
+#DeepDreamBorder>p{
+	text-align: left;
+	display: block;
+	width: 500px;
+	height: 30px;
+	font-size: 13px;
+	line-height: 30px;
+	letter-spacing: -1px;
+}
+
+
+
+#contentW{margin-bottom: 100px;}
+#content{
+	width: 1000px;
+	margin: 0px auto;
+	position:relative;
+}
+#top_category{
+	width: 1000px;
+	height: 30px;
+	position: relative;
+}
+#top_category>div>ul>li{
+	float: left;
+	width: 120px;
+	font-size: 12px;
+	line-height: 30px;
+	text-align: center;
+}
+#top_category>div>ul>li.top_category1>a{
+	display: block;
+	height: 30px;
+	width: 30px;
+	background: url(../images/home.png) no-repeat center;
+}
+#top_category>div>ul>li.top_category1{width: 30px;}
+#top_category>div>ul>li.top_category2{width: 50px;}
+#top_category>div>ul>li.top_category3{width: 70px;}
+#top_category>div>ul>li.category_next{width: 20px;}
+
+
+#content{
+	width: 1000px;
+}
+#main_content{
+	width: 1000px;
+	position: relative;
+	margin-bottom: 100px;
+	margin-top: 500px;
+}
+#content_real{
+	width: 750px;
+	float: left;
+	position: relative;
+}
+
+
+
+#DeepDreamDetail{
+	width: 700px;
+	float: left;
+}
+#DDDcategory{
+	width: 700px;
+	border-bottom: 1px solid black;
+}
+#DDDcategory>ul>li{
+	float: left;
+	width: 98px;
+	height: 49px;
+	line-height: 46px;
+	text-align: center;
+	font-size: 14px;
+	border-top: 1px solid #dbdbdb;
+	border-left: 1px solid #dbdbdb;
+	border-right: 1px solid #dbdbdb;
+}
+#DDDcategory>ul>li>a{
+	color: #7a7a7a;
+	letter-spacing: -1px;
+}
+#DDDcategory>ul>li:hover{
+	width: 98px;
+	height: 49px;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+#DDDcategory>ul>li:hover>a{
+	font-weight: bold;
+	text-decoration: underline;
+	color: black;
+}
+#DDDbox{
+	width: 700px;
+	margin-top: 30px;
+}
+#DDDbox>div{
+	width: 658px;
+	border: 1px solid #dbdbdb;
+	margin-bottom: 20px;
+	padding: 20px;
+}
+#DDDbox>div>img{margin: 15px; margin-right: 0px;}
+#DDDbox>div>div.DDDul{
+	float: left;
+	width: 500px;
+}
+.DDDul ul li{
+	background: gray;
+	padding-left: 15px;
+	line-height: 20px;
+	font-size: 14px;
+	letter-spacing: -1px;
+	background: url(../images/list_style.png) no-repeat left top;
+}
+.DDDimg{
+	float: right;
+	width: 100px;
+}
+#DDDadvantage{
+	width: 700px;
+}
+#DDDadvantage>div{
+	width: 700px;
+	background: white;
+	border-bottom: 1px solid #dbdbdb;
+	margin-top: 20px;
+}
+#DDDadvantage>div>p{
+	float: left;
+	width: 500px;
+	margin-top: 20px;
+	font-size: 12px;
+	color: #7a7a7a;
+}
+#DDDadvantage>div>div{
+	float: left;
+	width: 500px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	font-size: 12px;
+	color: #7a7a7a;
+}
+.DDDiconTag{
+	display: block;
+	font-size: 15px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	color: black;
+	letter-spacing: -1px;
+	font-family: "Nanum Gothic", serif;
+}
+.DDDiconUl{
+	float: left;
+	width: 500px;
+	font-size: 12px;
+	line-height: 20px;
+	color: #7a7a7a;
+}
+.DDDicon{
+	float: left;
+	margin: 20px;
+}
+#DDDunderW{
+	width: 700px;
+	margin-top: 30px;
+	font-family: "Nanum Gothic", serif;
+}
+#DDDunder1{
+	width: 660px;
+	padding: 20px;
+	background: #eeeeee;
+	font-size: 14px;
+	letter-spacing: -1px;
+	color: #444444;
+}
+#DDDunder2{
+	width: 660px;
+	padding: 20px;
+	margin-top: 20px;
+	background: #eeeeee;
+	font-size: 14px;
+	letter-spacing: -1px;
+	color: #444444;
+}
+#DDDunder2>ul>li{
+	margin-bottom: 10px;
+	padding-left: 15px;
+	background: url(../images/list_style_small.png) no-repeat left top;
+	line-height: 20px;
+}
+.DDDunderB{font-weight: bold;}
+.DDDunderSamll{font-size: 13px; padding-left: 10px; font-weight: normal;}
+.DDDunderRight{float: right;}
+.DDDunderBtn>input{
+	padding: 5px 10px;
+	background: white;
+	border: 1px solid #dbdbdb;
+	margin: 15px 0px;
+	color: #444444;
+}
+
+
+#content_sub_menu{
+	width: 250px;
+	float: right;
+	position: relative;
+}
+#quick_menu{
+	position: relative;
+	width: 250px;
+	height: 270px;
+	background: #f0f0f0;
+	font-size: 11px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+#quick_menu>h3{
+	font-size: 14px;
+	padding: 10px 5px 10px 10px;
+	color: #2b3853;
+}
+#quick_menu>div>div{
+	width: 250px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: #647492;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+#quick_menu>div>div>a{color: white;}
+#quick_menu>div>ul>li{
+	float:left;
+	width: 125px;
+	height: 23px;
+	line-height: 20px;
+	background: url(../images/bt_bg_8_20.png) no-repeat 110px 0px;
+}
+#quick_menu>div>ul>li:hover{background: url(../images/bt_bg_hover_8_20.png) no-repeat 110px 0px;}
+#quick_menu>div>ul>li>a{
+	padding-left: 10px;
+	font-weight: bold;
+	color: #7d8084;
+}
+#quickUnder1{
+	width: 250px;
+	background: #2d334b;
+	border-top: 1px solid #dbdbdb;
+	border-bottom: 1px solid #dbdbdb;
+	padding: 20px 0px;
+}
+	#quickUnder1 img{
+		margin-left: 10px;
+		float: left;
+	}
+#quickUnder2{
+	margin-top: 30px;
+	width: 250px;
+	background: #fbfbfb;
+	border-top: 1px solid #dbdbdb;
+	border-bottom: 1px solid #dbdbdb;
+}
+	#quickUnder2 div{
+		width: 250px;
+	}
+	#quickUnder2>div>h3{
+		display: block;
+		float: left;
+		width: 100px;
+		font-size: 15px;
+		padding-left: 3px;
+		line-height: 30px;
+	}
+	#quickUnder2>div>p.btbg{
+		width: 90px;
+		float: right;
+		font-size: 12px;
+		text-align: right;
+		padding-right: 15px;
+		line-height: 30px;
+		letter-spacing: -1px;
+		background: url(../images/bt_bg_8_20.png) no-repeat 95px 6px;
+	}
+	#popularCard1{
+		width: 250px;
+		text-align: center;
+		margin-top: 10px;
+	}
+	#popularCard1>p{font-size: 13px;}
+	#popularCard1>p:hover{text-decoration: underline;}
+	#popularCard2{
+		width: 250px;
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	#popularCard2>p{font-size: 13px;}
+	#popularCard2>p:hover{text-decoration: underline;}
+
+
+
+#content_sub_menu>div>input.btbg{
+	width: 250px;
+	height: 50px;
+	background: #eae9e9 url(../images/bt_bg_10_25.png) no-repeat 230px 13px;
+	border: none;
+	margin-top: 15px;
+	text-align: left;
+	padding-left: 20px;
+}
+#content_sub_menu>div>input.btbg:hover{
+	background: #6c6c6c url(../images/bt_bg_hover_white_10_25.png) no-repeat 230px 13px;
+	color: white;
+}
+
+

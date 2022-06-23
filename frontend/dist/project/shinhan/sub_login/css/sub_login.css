@@ -1,0 +1,265 @@
+﻿@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+#contentW{margin-bottom: 100px;}
+#content{
+	width: 1000px;
+	margin: 0px auto;
+	position:relative;
+}
+#top_category{
+	width: 1000px;
+	height: 30px;
+	position: relative;
+}
+#top_category>div>ul>li{
+	float: left;
+	width: 120px;
+	font-size: 12px;
+	line-height: 30px;
+	text-align: center;
+}
+#top_category>div>ul>li.top_category1>a{
+	display: block;
+	height: 30px;
+	width: 30px;
+	background: url(../images/home.png) no-repeat center;
+}
+#top_category>div>ul>li.top_category1{width: 30px;}
+#top_category>div>ul>li.top_category2{width: 50px;}
+#top_category>div>ul>li.category_next{width: 20px;}
+
+
+#content{
+	width: 1000px;
+}
+#main_content{
+	width: 1000px;
+	position: relative;
+	margin-bottom: 100px;
+}
+#content_real{
+	width: 750px;
+	float: left;
+	position: relative;
+}
+
+
+
+
+#loginHeader{
+	width: 700px;
+	margin-top: 20px;
+	border-bottom: 2px solid black;
+}
+#loginHeader>img{padding: 10px 0px;}
+#loginMiddle{
+	width: 700px;
+}
+#loginMethod{
+	width: 700px;
+	border-bottom: 1px solid #dbdbdb;
+}
+#loginMethod>p{
+	float: left;
+	width: 170px;
+	height: 170px;
+	line-height: 170px;
+	text-align: center;
+	font-weight: bold;
+}
+.select100{
+	float: left;
+	width: 120px;
+	height: 120px;
+	border-radius: 60px;
+	margin-top: 25px;
+	margin-left: 20px;
+	background: lightgray;
+	line-height: 120px;
+	text-align: center;
+}
+.select100:hover{background: #1e73b5;}
+.select100 a{
+	font-weight: bold;
+	color: white;
+}
+.select100>a.lineH{line-height: 20px;}
+.lineH{line-height: 20px;}
+.lineH>a{
+	display: block;
+	margin-top: 43px; 
+}
+.selected{background: #1e73b5;}
+
+#loginContent{
+	width: 700px;
+	padding: 50px 0px;
+	border-bottom: 1px solid #dbdbdb;
+}
+#loginContent>form>label{
+	float: left;
+	width: 120px;
+	height: 30px;
+	line-height: 35px;
+	font-weight: bold;
+	font-family: "Nanum Gothic", serif;
+	font-size: 14px;
+}
+#userId{
+	float: left;
+	width: 250px;
+	height: 30px;
+	margin-bottom: 5px;
+	background: white;
+	border: 1px solid  #dbdbdb;
+}
+#userId:focus{
+	border: 2px solid #1e73b5;
+	width: 248px;
+	height: 28px;
+}
+#userPassword{
+	float: left;
+	width: 250px;
+	height: 30px;
+	background: #a9d0f5;
+	border: 1px solid #dbdbdb;
+}
+#userPassword:focus{
+	border: 2px solid #1e73b5;
+	width: 248px;
+	height: 28px;
+}
+label[for="userPassword"]{clear: both;}
+
+#loginSubmit{width: 700px;}
+.loginSubmit{
+	display: block;
+	float: right;
+	width: 90px;
+	height:35px;
+	line-height: 35px;
+	margin: 20px 0px;
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+	background: #1e73b5;
+	border: none;
+}
+#loginContentUnder{
+	width: 700px;
+	padding: 20px 0px;
+}
+#LCUboxW{
+	background:white;
+	width: 698px;
+	border: 1px solid #dbdbdb;
+	border-radius: 5px;
+	padding: 20px 0px;
+}
+#LCUbox1{
+	float: left;
+	width:349px;
+}
+#LCUbox1>.LCUbox1_1{
+	float: left;
+	width: 80px;
+	padding: 20px;
+}
+#LCUbox1>.LCUbox1_2{
+	float: left;
+	width: 229px;
+	padding-top: 20px;
+}
+#LCUbox1>.LCUbox1_2>h4{
+	color: #7a7a7a;
+	margin-bottom: 5px;
+}
+#LCUbox1>.LCUbox1_2>p{
+	font-size: 12px;
+	font-weight: bold;
+	color: gray;
+	margin-bottom: 20px;
+}
+#LCUbox1>.LCUbox1_2>p>input{
+	background: white;
+	border: 1px solid #dbdbdb;
+	font-size: 12px;
+	padding: 2px 7px;
+	color: gray;
+}
+#LCUbox1>.LCUbox1_2>p.LCUE{margin-bottom: 0px;}
+
+#LCUbox2{
+	float: left;
+	width: 348px;
+	border-left: 1px solid #dbdbdb;
+}
+#LCUbox2>.LCUbox2_1{
+	float: left;
+	width: 80px;
+	padding: 20px;
+	padding-left: 19px;
+}
+#LCUbox2>.LCUbox2_2{
+	float: left;
+	width: 229px;
+	padding-top: 20px;
+}
+#LCUbox2>.LCUbox2_2>h4{
+	color: #7a7a7a;
+	margin-bottom: 5px;
+}
+#LCUbox2>.LCUbox2_2>p{
+	font-size: 12px;
+	font-weight: bold;
+	color: gray;
+	margin-bottom: 20px;
+}
+#LCUbox2>.LCUbox2_2>p>input{
+	background: white;
+	border: 1px solid #dbdbdb;
+	font-size: 12px;
+	padding: 2px 7px;
+	color: gray;
+}
+#LCUbox2>.LCUbox2_2>p.LCUE{margin-bottom: 0px;}
+
+#loginContentBottom{
+	width: 700px;
+	padding: 20px 0px;
+}
+#loginContentBottom>h4{
+	margin-bottom: 10px;
+	letter-spacing: -1px;
+}
+#loginContentBottom>ul>li{
+	padding-left: 15px;
+	margin-bottom: 10px;
+	font-size: 13px;
+	background: url(../images/list_style_small.png) no-repeat left top;
+}
+
+
+
+#content_sub_menu{
+	width: 250px;
+	float: right;
+	position: relative;
+}
+#content_sub_menu>div>input.btbg{
+	width: 250px;
+	height: 50px;
+	background: #eae9e9 url(../images/bt_bg_10_25.png) no-repeat 230px 13px;
+	border: none;
+	margin-top: 15px;
+	text-align: left;
+	padding-left: 20px;
+	letter-spacing: -1px;
+}
+#content_sub_menu>div>input.btbg:hover{
+	background: #6c6c6c url(../images/bt_bg_hover_white_10_25.png) no-repeat 230px 13px;
+	color: white;
+}
+
+

@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Cinzel');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Song+Myung');
+
+*{padding: 0; margin: 0;}
+dl, dt, ul, li{list-style: none;}
+a{text-decoration: none; color: black;}
+html{width: 100%; height: 100%; overflow: hidden;}
+.cf:after{content: ""; display: block; clear: both;}
+img{border: none;}
+
+#Wrap{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#videoW{
+	width: auto;
+	height: 100%;
+	float: left;
+}
+#video{width: auto;	height: 100%;}
+#video video{min-height: 1020px;}
+#left{
+	width: auto;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 0 20px;
+	z-index: 3;
+}
+#left .leftLogo{
+	width: 102px;
+	height: 152px;
+	margin-top: 20px;
+}
+#left .leftMenu{
+	width: 102px;
+	padding: 10px; 
+	margin-top: 10px;
+}
+#left .leftMenu>ul>li{
+	width: 82px;
+	height: 62px;
+	background: url(../images/iconBG.png) no-repeat center;
+	line-height: 14px;
+	text-align: center;
+	font-size: 18px;
+	position: relative;
+	cursor: pointer;
+	font-family: 'Abril Fatface', cursive;
+	padding-top: 32px;
+}
+#left .leftMenu>ul>li>a{color: #444444;}
+#left .leftMenu>ul>li.clothe{margin-top: -15px; margin-left: 46px;}
+#left .leftMenu>ul>li.article{margin-top: -15px;}
+#left .leftMenu>ul>li.copyright{margin-top: -15px; margin-left: 46px;}
+#left .leftMenu>ul>li.icon{margin-top: -15px;}
+#left .leftMenu>ul>li>.TD{
+	width: 276px;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	display: none;
+}
+#left .leftMenu>ul>li>.TD>ul>li{
+	float: left;
+	width: 82px;
+	height: 94px;
+	background: url(../images/iconsubBG.png) no-repeat center;
+	line-height: 14px;
+	text-align: center;
+	font-size: 14px;
+	margin-left: 10px;
+	display: none;
+}
+#left .leftMenu>ul>li>.TD>ul>li>a{padding-top: 33px; display: block;}
+#left .leftMenu>ul>li>.TD>ul>li.flip{
+	-webkit-transform: rotateY(720deg); 
+	-moz-transform: rotateY(720deg); 
+	-ms-transform: rotateY(720deg); 
+	-o-transform: rotateY(720deg); 
+	transform: rotateY(720deg); 
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+#left .leftMenu>ul>li>.TD>ul>li.flip2{
+	-webkit-transform: rotateY(-720deg); 
+	-moz-transform: rotateY(-720deg); 
+	-ms-transform: rotateY(-720deg); 
+	-o-transform: rotateY(-720deg); 
+	transform: rotateY(-720deg); 
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+/* 컨텐츠 안에 이미지 슬라이드 설정 */
+#content{
+	width: 87%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+#content>div{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: none;
+	left: 0;
+}
+#content>div>.TDiv{
+	width: 0px;	
+	height: 100%; 
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	overflow: hidden;
+	background: transparent;
+	background-color: rgba(210,179,146,0.8);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#ccd2b392, endColorStr=#ccd2b392);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr=#ccd2b392, endColorStr=#ccd2b392)";
+}
+#content>div>.TDivSNS{
+	background: transparent !important;
+	background-color: transparent !important;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#00ffffff, endColorStr=#00ffffff);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr=#00ffffff, endColorStr=#00ffffff)";
+}
+#content>div>.TDiv>.contReal{
+	margin-top: 120px;
+	margin-left: 250px;
+	width: 73%;
+	height: 700px;
+	background: transparent;
+	background-color: rgba(255,255,255,0.8);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#ccffffff, endColorStr=#ccffffff);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr=#ccffffff, endColorStr=#ccffffff)";
+	overflow: hidden;
+	position: relative;
+	z-index: 9;
+}
+#content>div>.TDiv>.widthZero{
+	width: 30px;
+	height: 80px;
+	position: absolute;
+	top: 50%;
+	right: 2%;
+	margin-top: -40px;
+	background: url(../images/widthZero.png) no-repeat center;
+	cursor: pointer;
+	z-index: 88;
+}
+.before{
+	width: 50px;
+	height: 50px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	/* behavior: url(PIE/PIE.htc); */
+	position: absolute;
+	top: 50%;
+	left: 4%;
+	margin-top: -60px;
+	background: gray url(../images/before.png) no-repeat center;
+	cursor: pointer;
+	opacity: 0.6;
+}
+.next{
+	width: 50px;
+	height: 50px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	/* behavior: url(PIE/PIE.htc); */
+	position: absolute;
+	top: 50%;
+	left: 4%;
+	margin-top: 10px;
+	background: gray url(../images/next.png) no-repeat center;
+	cursor: pointer;
+	opacity: 0.6;
+}
+
+#content>div>.TDiv>div>.ContUL{
+	width: 950px;
+	height: 600px;
+	float: right;
+	margin: 50px;
+	overflow: hidden;
+	position: relative;
+}
+#content>div>.TDiv>div>.ContUL>ul{
+	width: 950px;
+	height: 3600px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#content>div>.TDiv>div>.ContUL>ul>li{
+	height: 600px;
+	overflow: hidden;
+	text-align: right;
+}
+#content>div>.TDiv>div>.ContUL>ul>li>img{height: 100%;}
+
+
+
+/* 컨텐츠 안 옷 설정 */
+.dressImg{
+	width: 100%;
+	height: 300px;
+	margin: 150px auto 20px auto;
+	text-align: center;
+}
+.dressImg img{height: 300px;}
+.dressCapt{
+	width: 100%;
+	font-size: 20px;
+	font-family: 'Song Myung',serif;
+	text-align: center;
+	color: #444444;
+}
+.dressCapt p{
+	font-family: 'Nanum Gothic',serif;
+	font-size: 18px;
+	width: 1000px;
+	margin: 10px auto;
+	letter-spacing: -1px;
+}
+
+
+
+/* 컨텐츠 안 기사 설정 */
+.articleCont{
+	width: 92%;
+	height: 600px;
+	margin: 0px auto;
+	padding-top: 80px;
+}
+.articleCont .articleTit{
+	font-family: 'Song Myung',serif;
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.articleCont .articleSubTit{
+	font-family: 'Song Myung',serif;
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.articleCont .articleText{
+	width: 1000px;
+	margin: 0 auto;
+	font-family: 'Nanum Gothic',serif;
+	font-size: 18px;
+	text-align: center;
+	line-height: 28px;
+	letter-spacing: -1px;
+}
+/* 컨텐츠 안에 copyright 설정 */
+.staff{
+	width: 800px;
+	height: 600px;
+	margin: 110px auto;
+	text-align: center;
+	font-family: 'Song Myung',serif;
+	font-size: 20px;
+}
+.ygstage{
+	width: 800px;
+	height: 600px;
+	margin: 230px auto;
+	text-align: center;
+	font-family: 'Song Myung',serif;
+	font-size: 20px;
+}
+.sns{
+	width: 300px;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	right: 3%;
+	margin-top: -25px;
+}
+.sns img{width: 50px; height: 50px;}
+
+
+#right{
+	width: 13%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	background: #eeeeee;
+	color: #444444;
+}
+#right .topTit{
+	font-size: 110px;
+	width: 670px;
+	font-family: 'Abril Fatface', cursive;
+	/* -webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg); */
+	-webkitwriting-mode: tb-rl;
+	-ms-writing-mode: tb-rl;
+	-moz-writing-mode: tb-rl;
+	-o-writing-mode: tb-rl;
+	writing-mode: tb-rl;
+	position: absolute;
+	bottom: 10px;
+	right: 110px;
+}
+#right .topTit span{
+	padding: 10px 10px 0 0;
+	font-size: 30px;
+	line-height: 33px;
+	font-family: 'Cinzel', serif;
+}
+
+#popup{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: transparent;
+	background-color: rgba(0,0,0,0.8);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#cc000000, endColorStr=#cc000000);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr=#cc000000, endColorStr=#cc000000)";
+	z-index: 999;
+	display: none;
+}
+.subscribePop{
+	width: 500px;
+	height: 300px;
+	position: absolute;
+	top: 50%;
+	margin-top: -150px;
+	left: 50%;
+	margin-left: -250px;
+	background: transparent;
+	background-color: rgba(255,255,255,0.9);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#e6ffffff, endColorStr=#e6ffffff);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr=#e6ffffff, endColorStr=#e6ffffff)";
+	border: 1px solid #d2b392;
+	text-align: center;
+	font-family: 'Nanum Gothic',serif;
+	letter-spacing: -1px;
+}
+.subscribePop .Stit{
+	margin-top: 100px;
+	margin-bottom: 20px;
+	font-family: 'Song Myung',serif;
+	font-size: 20px;
+}
+.subscribePop>p.closeBtn{
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	color: #d2b392;
+	cursor: pointer;
+}
+.subscribePop form{
+	height: 27px;
+	width: 202px;
+	margin: 10px auto;
+}
+.subscribePop form input[type="text"]{
+	width: 140px;
+	height: 25px;
+	background: white;
+	line-height: 25px;
+	padding-left: 10px;
+	border: 1px solid #d2b392;
+	float: left;
+}
+.subscribePop form input[type="submit"]{
+	width: 50px;
+	height: 27px;
+	border: none;
+	background: #d2b392;
+	font-family: 'Nanum Gothic',serif;
+	float: left;
+	color: #444444;
+}
