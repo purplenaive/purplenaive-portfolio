@@ -86,10 +86,10 @@ export default {
   $project-template-1: "kinderfest    barofactory   barohome  barohome    pd04       paik  cafe24    xiaomi";
   $project-template-2: "kinderfest    barofactory   umc       yhsbearing  pd04       elle  cafe24    shinhan";
   $project-template-3: "work-profile  work-profile  umc       portfolio   portfolio  elle  yg-stage  maeil";
-  
-  $work-template-1: "work19  work19  work20  work25";
-  $work-template-2: "work22  work21  work21  work25";
-  $work-template-3: "work23  work23  work24  work26";
+
+  $work-template-1: "work0  work0  work3  work6";
+  $work-template-2: "work1  work4  work4  work6";
+  $work-template-3: "work2  work2  work5  work7";
 
   grid-template-areas:  
   "#{$resume-template-1} #{$project-template-1} #{$work-template-1}"

@@ -6,6 +6,7 @@ module.exports = defineConfig({
   transpileDependencies: true,
   outputDir: "../backend/public",
   devServer: {
+    historyApiFallback: true,
     proxy: {
       "^/api": {
         target,

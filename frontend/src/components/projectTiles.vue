@@ -1,4 +1,4 @@
-<template v-if="project.show">
+<template v-show="project.show">
   <article 
     v-for="project, index in project.data"
     :key="`project-${project.id}`"
@@ -76,9 +76,9 @@ export default {
   data() {
     return {
       project: {
+        show: false,
         data: [],
         trimed: [],
-        show: false,
       }
     }
   },
@@ -122,6 +122,7 @@ export default {
 
       this.$nextTick(() => {
         this.$store.dispatch("tooltip/activeTooltips");
+        this.project.show = true;
       })
     },
   },
@@ -204,7 +205,7 @@ export default {
       .button {
         height: 26px;
         margin-right: 8px;
-        font-weight: $ptd;
+        font-weight: 600;
         cursor: pointer;
         background-color: transparent;
 
@@ -215,7 +216,6 @@ export default {
         }
       }
       .button-page {
-        padding-top: 1px;
         border-radius: 20px;
         background-color: $black;
 
@@ -223,6 +223,7 @@ export default {
           display: block;
           padding: 0 12px;
           font-size: $font-small;
+          font-family: $ptd !important;
           color: white;
         }
       }

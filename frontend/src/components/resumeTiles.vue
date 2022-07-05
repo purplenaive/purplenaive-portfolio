@@ -358,6 +358,14 @@ export default {
     justify-content: center;
     gap: 4px;
   }
+  .link-list,
+  .tools-list {
+
+    .icon {
+      margin: 0 auto;
+    }
+  }
+  
 }
 
 .tile-license {

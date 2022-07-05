@@ -1,4 +1,4 @@
-<template>
+<template v-show="gallery.show">
   <article id="profile-tile" class="tile work-profile scrollNav">
     <img src="@/assets/image/profile.jpg" alt="카메라를 들고 바다를 찍고 있는 여성" class="profile-image">
   </article>
@@ -7,7 +7,7 @@
     :key="`gallery-${index}`"
     :id="index == 0 ? 'work-tile' : ''"
     class="tile tile-work"
-    :class="{'scrollNav': index == 0,}"
+    :grid-area="'work' + index"
   >
     <img :src="page.cover.file.url" alt="gallery image" class="cover-image">
   </article>
@@ -18,10 +18,8 @@ export default {
   name: "workTiles",
   data() {
     return {
-      instagram: {
-        data: [],
-      },
       gallery: {
+        show: false,
         data: [],
       }
     }
@@ -46,6 +44,10 @@ export default {
         };
       });
       this.gallery.data = trim;
+
+      this.$nextTick(() => {
+        this.gallery.show = true;
+      })
     },
   },
   mounted() {
@@ -76,11 +78,15 @@ export default {
   //   @include tile(1, 2);
   // }
 
-  @for $i from 1 to 30 {
-    &:nth-child(#{$i}) {
-      grid-area: (work + $i) ;
-    }
-  }
+  // @for $i from 1 to 30 {
+  //   &:nth-child(#{$i}) {
+  //     grid-area: (work + $i) ;
+
+  //     &::after {
+  //       content: "work #{$i}";
+  //     }
+  //   }
+  // }
 
   &:hover {
     overflow: visible;

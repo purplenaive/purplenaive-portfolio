@@ -37,6 +37,6 @@ body {
 #app {
   width: auto;
   height: 100%;
-  font-family: "pretendard";
+  font-family: "Pretendard" !important;
 }
 </style>
