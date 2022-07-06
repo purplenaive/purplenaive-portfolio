@@ -149,22 +149,10 @@ export default {
   data() {
     return {
       basic_info_list: [
-        {
-          type: "birth",
-          data: "00.01.20 (23세)"
-        },
-        {
-          type: "phone",
-          data: "8435 3663"
-        },
-        {
-          type: "address",
-          data: "경기도 김포시 거주"
-        },
-        {
-          type: "email",
-          data: "purplenaive@gmail.com"
-        },
+        { type: "birth", data: "00.01.20 (23세)" },
+        { type: "phone", data: "8435 3663" },
+        { type: "address", data: "경기도 김포시 거주" },
+        { type: "email", data: "purplenaive@gmail.com" },
       ],
       tools_list: [
         {
@@ -220,7 +208,7 @@ export default {
         {
           name: "lightroom",
           icon: "lr-flat",
-          description: "취미인 사진 촬영 후 보정할 때 사용하였으며,<br>어느 정도 사용이 가능합니다",
+          description: "간단한 사용이 가능합니다",
         },
       ],
       link_list: [
