@@ -126,18 +126,6 @@
           <p class="position-detail" v-html="career.position"></p>
         </li>
       </ol>
-      <p class="mini-introduce">
-        어떻게 하면 더 효율적일까<br>
-        더 좋은 방법이 있지 않을까<br>
-        끝없이 고민하며<br>
-        계속해서 성장해갑니다<br>
-        <br>
-        <strong class="strong">
-          이런 저와 닮은,<br>
-          계속해서 발전해가는<br>
-          모든 코드를 좋아합니다!<br>
-        </strong>
-      </p>
     </div>
   </article>
 
@@ -470,15 +458,6 @@ export default {
   }
   .position-detail {
     font-size: $font-small;
-  }
-
-  .mini-introduce {
-    justify-self: flex-end;
-    font-size: $font-small;
-    color: $font-gray;
-    margin-top: auto;
-
-    .strong { font-weight: 600; }
   }
 }
 

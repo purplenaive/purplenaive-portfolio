@@ -1,13 +1,19 @@
 <template v-show="project.show">
   <article 
-    v-for="project, index in project.data"
+    v-for="project in project.data"
     :key="`project-${project.id}`"
     class="tile tile-project"
     :class="`tile-${project.name}`"
   >
     <h3 class="project__title">
-      <span class="project-index">{{index < 10 ? "0" + index: index}}-{{project.id.substr(0, 2)}}</span>
-      {{project.title}}
+      <ul class="project-tag">
+        <li 
+          v-for="tag, index in project.tags"
+          :key="`tag-${project.id}-${index}`"
+          class="tag__item"
+        >#{{tag}}</li>
+      </ul>
+      {{project.sub_title}}
     </h3>
     <p 
       v-if="project.logo" 
@@ -60,13 +66,7 @@
         </button>
       </p>
     </div>
-    <ul class="project-tag">
-      <li 
-        v-for="tag, index in project.tags"
-        :key="`tag-${project.id}-${index}`"
-        class="tag__item"
-      >#{{tag}}</li>
-    </ul>
+    <span class="project-mini-title">{{project.title}}</span>
   </article>
 </template>
 
@@ -97,9 +97,11 @@ export default {
       const trim = data.map(function(value) {
         const date_start = value.properties["작업 날짜"].date.start;
         const date_end = value.properties["작업 날짜"].date.end;
+
         return {
           id: value.id,
           title: value.properties["이름"].title[0].plain_text,
+          sub_title: value.properties["title"].rich_text[0].plain_text,
           link: {
             url: value.url,
             page: value.properties["페이지"].url,
@@ -160,12 +162,21 @@ export default {
     margin: 0;
     font-size: $font-regular;
     font-weight: 600;
+  }
+  .project-tag {
+    @include flex(false, row, nowrap, center, center);
 
-    .project-index {
-      font-size: 10px;
-      font-weight: 400;
+    margin-bottom: 6px;
+
+    .tag__item {
+      font-size: 13px;
       color: $font-gray;
-      margin-bottom: 4px;
+      margin-right: 4px;
+      font-weight: 400;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
   .project__thumbnail {
@@ -229,18 +240,11 @@ export default {
       }
     }
   }
-  .project-tag {
-    @include flex(false, row, nowrap, center, center);
-
-    .tag__item {
-      font-size: $font-xs;
-      color: $font-gray;
-      margin-right: 4px;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
+  .project-mini-title {
+    font-size: $font-xs;
+    font-weight: 400;
+    color: $font-gray;
+    margin-bottom: 4px;
   }
 }
 
