@@ -28,7 +28,7 @@
         class="vector vector-4"
         filter="url(#blurry)"
       />
-      <circle cx="3150" cy="80vh" r="110" class="vector vector-5" filter="url(#blurry)"/>
+      <circle cx="2950" cy="80vh" r="110" class="vector vector-5" filter="url(#blurry)"/>
       <circle cx="2500" cy="-30" r="111" class="vector vector-6" filter="url(#blurry)"/>
 
       <path 
