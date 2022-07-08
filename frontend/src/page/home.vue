@@ -51,7 +51,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~@/assets/css/global.scss";
 
 #home {
   @include flex(true, column, nowrap, center, flex-start);

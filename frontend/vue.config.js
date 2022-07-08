@@ -4,6 +4,15 @@ const target = "http://localhost:3000"
 
 module.exports = defineConfig({
   transpileDependencies: true,
+  css: {
+    loaderOptions: {
+      scss: {
+        additionalData: `
+        @import "@/assets/css/global.scss";
+        `,
+      }
+    }
+  },
   outputDir: "../backend/public",
   devServer: {
     historyApiFallback: true,

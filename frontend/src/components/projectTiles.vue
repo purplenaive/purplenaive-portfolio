@@ -135,7 +135,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~@/assets/css/global.scss";
 
 .tile {
   @include glassmorphism($padding: false);

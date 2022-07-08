@@ -84,7 +84,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~@/assets/css/global.scss";
 
 .tooltip {
   @include flex(false, column, nowrap, center, center);

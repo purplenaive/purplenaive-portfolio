@@ -5,7 +5,7 @@ const axios = require("axios");
 let projects = [];
 let works = [];
 const PROJECT_TOKEN = "bb8c08d768a2428990305d0427d63665";
-const GALLERY_TOKEN = "914c534dd5514aac9c296bc057362f4d";
+// const GALLERY_TOKEN = "914c534dd5514aac9c296bc057362f4d";
 const ACCESS_KEY = "secret_QEaI6MPUF0jvojsltXj9lCmCcjfJznR1xwIUURiubXc";
 
 function options(url) {
@@ -21,7 +21,6 @@ function options(url) {
   }
 }
 const project_options = options(PROJECT_TOKEN);
-const gallery_options = options(GALLERY_TOKEN);
 
 // ***** project *****
 router.get("/api/project", async function(req, res, next) {
@@ -36,17 +35,5 @@ router.get("/api/project", async function(req, res, next) {
   
   res.send(projects);
 });
-
-// ***** work *****
-router.get("/api/work", async function(req, res, next) {
-  await axios.request(gallery_options)
-    .then(response => {
-      works = response.data.results;
-    })
-    .catch(error => {
-      console.log("notion get works error : ", error);
-    })
-  res.send(works);
-})
 
 module.exports = router;

@@ -1,5 +1,4 @@
 <template>
-  <noise-filter></noise-filter>
  
   <router-view/>
 
@@ -7,13 +6,12 @@
 </template>
 
 <script>
-import noiseFilter from '@/components/noise.vue'
 import tooltip from "@/components/tooltip.vue";
 
 export default {
   name: 'App',
   components: {
-    noiseFilter, tooltip
+    tooltip
   },
 }
 </script>

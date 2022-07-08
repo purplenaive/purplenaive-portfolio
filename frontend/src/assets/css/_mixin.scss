@@ -1,5 +1,6 @@
 @import "~@/assets/css/icon";
 
+// ********** FLEX ********** //
 @mixin flex($inline, $direction, $wrap, $justify, $align) {
   display: if($inline, inline-flex, flex);
   flex-flow: $direction $wrap;
@@ -7,6 +8,7 @@
   align-items: $align;
 }
 
+// ********** 유리 타일 ********** //
 @mixin glassmorphism($header: false, $padding: true, $shadow: true, $tilt: true) {
   border-radius: 24px;
   border: 1px solid rgba(white, 0.6);
@@ -60,7 +62,24 @@
     height: 100%;
   }
 }
+
+// ********** TILE 크기 지정 ********** //
 @mixin tile($width: 1, $height: 1 ) {
   width: 200 * $width + (16 * ($width - 1)) * 1px;
   height: (200 * $height) + (16 * ($height - 1)) * 1px;
+}
+
+// ********** 배경 Vector 애니메이션 생성 ********** //
+@mixin createPathAnimation($list, $name) {
+  @keyframes #{path- + $name} {
+    0% {
+      d: path(nth($list, 1));
+    }
+    50% {
+      d: path(nth($list, 2));
+    }
+    100% {
+      d: path(nth($list, 3));
+    }
+  }
 }

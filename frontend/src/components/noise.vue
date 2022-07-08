@@ -103,6 +103,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .noise {
   width: 100vw;
   height: 100vh;

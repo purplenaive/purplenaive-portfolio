@@ -22,7 +22,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~@/assets/css/global.scss";
 
 .sticky-contact {
   @include flex(false, row, nowrap, flex-start, center);

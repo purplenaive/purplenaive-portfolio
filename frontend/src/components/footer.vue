@@ -18,7 +18,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~@/assets/css/global.scss";
 
 .footer {
   width: 200px;
