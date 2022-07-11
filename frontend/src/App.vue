@@ -28,13 +28,12 @@ html {
 }
 body {
   min-width: 100%;
-  height: 100%;
+  min-height: 100%;
+  height: auto;
   padding: 0;
   margin: 0;
 }
 #app {
-  width: auto;
-  height: 100%;
   font-family: "Pretendard" !important;
 }
 </style>

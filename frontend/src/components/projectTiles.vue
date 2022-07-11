@@ -1,73 +1,87 @@
 <template v-show="project.show">
-  <article 
-    v-for="project in project.data"
-    :key="`project-${project.id}`"
-    class="tile tile-project"
-    :class="`tile-${project.name}`"
-  >
-    <h3 class="project__title">
-      <ul class="project-tag">
-        <li 
-          v-for="tag, index in project.tags"
-          :key="`tag-${project.id}-${index}`"
-          class="tag__item"
-        >#{{tag}}</li>
-      </ul>
-      {{project.sub_title}}
-    </h3>
-    <p 
-      v-if="project.logo" 
-      class="project__thumbnail"
-    >
-      <img :src="`/image/project/${project.name}.png`" :alt="project.name + 'logo'">
-    </p>
-    <div class="tile__content">
-      <p class="detail-info period">
-        {{project.date.start}}
-        <template v-if="project.date.end !== ''"> ~ {{project.date.end}}</template>
-        <template v-if="project.date.end == ''"> ~ 진행 중</template>
-      </p>
-      <p class="detail-info tools">
-        <i 
-          v-for="tool in project.tools"
-          :key="`tool-${tool}`"
-          class="icon tooltipBox"
-          :class="`${tool}-outline`"
-          :data-tooltip="tool"
-        ></i>
-      </p>
-      <p class="detail-info link-buttons">
-        <button 
-          class="button button-git"
-          :disabled="project.link.git == ''"
-        >
-          <a :href="project.link.git" target="_blank">
-            <i 
-              class="icon git-fab tooltipBox"
-              :data-tt-title="project.link.git != '' ? '' : '링크 비활성화'"
-              data-tooltip="프로젝트 깃 페이지로 이동합니다"
-            ></i>
-          </a>
-        </button>
-        <button 
-          class="button button-detail"
-        >
-          <a :href="project.link.url" target="_blank">
-            <i 
-              class="icon page-fab tooltipBox"
-              data-tooltip="프로젝트 상세 설명 페이지로 이동합니다"
-            ></i>
-          </a>
-        </button>
-        <button class="button button-page">
-          <a :href="project.link.page" target="_blank">
-            페이지
-          </a>
-        </button>
-      </p>
+  <section class="section section-project">
+
+    <div id="project-tile" class="tile-title">
+      <h2 class="title__text">프로젝트</h2>
+      <a class="view-all-list">
+        <span class="button__text">글 전체 목록</span>
+        <span class="icon-wrapper">
+          <i class="icon hamburger-thin"></i>
+        </span>
+      </a>
     </div>
-    <span class="project-mini-title">{{project.title}}</span>
-  </article>
+  
+    <article 
+      v-for="project in project.data"
+      :key="`project-${project.id}`"
+      class="tile tile-project"
+      :class="`tile-${project.name}`"
+    >
+      <div class="project__title">
+        <ul class="project-tag">
+          <li 
+            v-for="tag, index in project.tags"
+            :key="`tag-${project.id}-${index}`"
+            class="tag__item"
+          >#{{tag}}</li>
+        </ul>
+        <h3 class="title__text">{{project.sub_title}}</h3>
+      </div>
+      <p 
+        v-if="project.logo" 
+        class="project__thumbnail"
+      >
+        <img :src="`/image/project/${project.name}.png`" :alt="project.name + 'logo'">
+      </p>
+      <div class="tile__content">
+        <p class="detail-info period">
+          {{project.date.start}}
+          <template v-if="project.date.end !== ''"> ~ {{project.date.end}}</template>
+          <template v-if="project.date.end == ''"> ~ 진행 중</template>
+        </p>
+        <p class="detail-info tools">
+          <i 
+            v-for="tool in project.tools"
+            :key="`tool-${tool}`"
+            class="icon tooltipBox"
+            :class="`${tool}-outline`"
+            :data-tooltip="tool"
+          ></i>
+        </p>
+        <p class="detail-info link-buttons">
+          <button 
+            class="button button-git"
+            :disabled="project.link.git == ''"
+          >
+            <a :href="project.link.git" target="_blank">
+              <i 
+                class="icon git-fab tooltipBox"
+                :data-tt-title="project.link.git != '' ? '' : '링크 비활성화'"
+                data-tooltip="깃 페이지로 이동합니다"
+              ></i>
+            </a>
+          </button>
+          <button 
+            class="button button-detail"
+          >
+            <a :href="project.link.url" target="_blank">
+              <i 
+                class="icon page-fab tooltipBox"
+                data-tooltip="상세 설명 페이지로 이동합니다"
+              ></i>
+            </a>
+          </button>
+          <button class="button button-page">
+            <a :href="project.link.page" target="_blank">
+              페이지
+            </a>
+          </button>
+        </p>
+      </div>
+      <span class="project-mini-title">{{project.title}}</span>
+    </article>
+
+  </section>
 </template>
 
 <script>
@@ -136,6 +150,21 @@ export default {
 
 <style lang="scss" scoped>
 
+.section-project {
+  grid-template-areas: 
+    "project-title  project-title  project-title  project-title  project-title"
+    "kinderfest     barofactory    barohome       barohome       pd04     "
+    "kinderfest     barofactory    umc            yhsbearing     pd04     "
+    "simpol         simpol         umc            portfolio      portfolio"
+    "elle           xiaomi         yg-stage       yg-stage       cafe24"
+    "elle           maeil          paik           shinhan        cafe24"
+  ;
+}
+
+.tile-title {
+  grid-area: project-title;
+}
+
 .tile {
   @include glassmorphism($padding: false);
   @include flex(false, column, nowrap, space-between, center);
@@ -159,8 +188,11 @@ export default {
     @include flex(false, column, nowrap, flex-start, center);
 
     margin: 0;
-    font-size: $font-regular;
-    font-weight: 600;
+    
+    .title__text {
+      font-size: $font-regular;
+      font-weight: 600;
+    }
   }
   .project-tag {
     @include flex(false, row, nowrap, center, center);
@@ -178,6 +210,7 @@ export default {
       }
     }
   }
+
   .project__thumbnail {
     position: absolute;
     top: 50%;
@@ -259,7 +292,7 @@ $tile-setting: (
   ( "name": paik, "size": (1, 1), "color": "", ),
   ( "name": elle, "size": (1, 2), "color": "", ),
   ( "name": cafe24, "size": (1, 2), "color": $tile-red, ),
-  ( "name": yg-stage, "size": (1, 1), "color": "", ),
+  ( "name": yg-stage, "size": (2, 1), "color": "", ),
   ( "name": shinhan, "size": (1, 1), "color": "", ),
   ( "name": xiaomi, "size": (1, 1), "color": "", ),
   ( "name": maeil, "size": (1, 1), "color": $tile-blue, ),

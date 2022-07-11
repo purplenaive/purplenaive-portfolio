@@ -1,3 +1,85 @@
 @charset "UTF-8";
 @import "~@/assets/css/mixin";
 @import "~@/assets/css/font";
+
+.strong { font-weight: 700; }
+.underline { text-decoration: underline; }
+
+
+// ********** #app ********** //
+#app {
+  @include flex(true, row, nowrap, center, flex-start);
+
+  width: 100%;
+  height: auto;
+  padding: 200px 0;
+  gap: 16px;
+  box-sizing: content-box;
+  scroll-behavior: smooth;
+  position: relative;
+  z-index: 0;
+  
+  .background-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: #FFFDFA no-repeat center top;
+    background-image: image-set(
+      url("@/assets/image/vector-background.webp") 1x,
+      url("@/assets/image/vector-background.png") 1x,
+      url("@/assets/image/vector-background.jpg") 1x,
+    );
+    background-size: cover;
+  }
+}
+
+// ********** section ********** //
+.section {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(5, 200px);
+  grid-auto-flow: row dense;
+}
+
+// ********** tile title ********** //
+.tile-title {
+  @include tile(5, 1);
+  @include flex(false, row, nowrap, space-between, center);
+
+  width: 100%;
+  height: 50px;
+  padding: 0 8px;
+  color: $font-gray;
+  text-align: center;
+  font-family: $ptd;
+  
+  .view-all-list {
+    @include flex(false, row, nowrap, flex-end, center);
+    
+    font-family: $ptd;
+    font-size: $font-regular;
+    padding: 8px 0 8px 12px;
+    cursor: pointer;
+    background-color: transparent;
+
+    .button__text {
+      margin-right: 12px;  
+      color: $font-gray;
+    }
+  }
+  .icon-wrapper {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 4px 0 rgba(#333333, 0.4);
+    background-color: white;
+
+    .icon {
+      @include icon-custom(15);
+    }
+  }
+}

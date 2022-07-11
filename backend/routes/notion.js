@@ -3,26 +3,28 @@ const router = express.Router();
 const axios = require("axios");
 
 let projects = [];
-let works = [];
-const PROJECT_TOKEN = "bb8c08d768a2428990305d0427d63665";
-// const GALLERY_TOKEN = "914c534dd5514aac9c296bc057362f4d";
+let notes = [];
 const ACCESS_KEY = "secret_QEaI6MPUF0jvojsltXj9lCmCcjfJznR1xwIUURiubXc";
+const PROJECT_TOKEN = "bb8c08d768a2428990305d0427d63665";
+const NOTE_TOKEN = "d1619275de714a158cc8d90bef99ddb4";
 
-function options(url) {
+function options(url, date, size) {
   return {
     method: "POST",
     url: `https://api.notion.com/v1/databases/${url}/query`,
     headers: {
       Accept: "application/json",
-      "Notion-Version": "2022-02-22",
+      "Notion-Version": date,
       Authorization: `Bearer ${ACCESS_KEY}`,
+      'Content-Type': 'application/json'
     },
-    data: {page_size: 20},
+    data: {page_size: size},
   }
 }
-const project_options = options(PROJECT_TOKEN);
+const project_options = options(PROJECT_TOKEN, "2022-02-22", 20);
+const note_options = options(NOTE_TOKEN, "2022-06-28", 50);
 
-// ***** project *****
+// ********** project ********** //
 router.get("/api/project", async function(req, res, next) {
   
   await axios.request(project_options)
@@ -35,5 +37,20 @@ router.get("/api/project", async function(req, res, next) {
   
   res.send(projects);
 });
+
+// ********** note ********** //
+router.get("/api/note", async function(req, res, next) {
+
+  await axios.request(note_options)
+  .then(response => {
+    notes = response.data;
+  })
+  .catch(error => {
+    console.log("notion get notes error : ", error);
+  });
+
+  res.send(notes);
+})
+
 
 module.exports = router;

@@ -73,13 +73,11 @@
 <script>
 // import VueApexCharts from "vue3-apexcharts"
 import axios from "axios";
-import colorBackground from "@/components/background.vue";
 // import pageList from "@/components/pageList.vue";
 
 export default {
   name: "postTemplate",
   components: {
-    colorBackground, 
     // pageList,
     // apexchart: 
     // VueApexCharts,

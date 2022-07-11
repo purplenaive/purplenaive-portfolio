@@ -20,6 +20,7 @@ export default {
 <style lang="scss" scoped>
 
 .footer {
+  display: none;
   width: 200px;
   height: 100%;
   position: fixed;
