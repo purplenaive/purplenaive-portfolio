@@ -8,7 +8,7 @@ const ACCESS_KEY = "secret_QEaI6MPUF0jvojsltXj9lCmCcjfJznR1xwIUURiubXc";
 const PROJECT_TOKEN = "bb8c08d768a2428990305d0427d63665";
 const NOTE_TOKEN = "d1619275de714a158cc8d90bef99ddb4";
 
-function options(url, date, size) {
+function options(url, date, size, filter) {
   return {
     method: "POST",
     url: `https://api.notion.com/v1/databases/${url}/query`,
@@ -16,13 +16,22 @@ function options(url, date, size) {
       Accept: "application/json",
       "Notion-Version": date,
       Authorization: `Bearer ${ACCESS_KEY}`,
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    data: {page_size: size},
+    data: {page_size: size, filter},
   }
 }
 const project_options = options(PROJECT_TOKEN, "2022-02-22", 20);
-const note_options = options(NOTE_TOKEN, "2022-06-28", 50);
+const note_options = options(NOTE_TOKEN, "2022-02-22", 100, {
+  "and": [
+    {
+      "property": "view",
+      "checkbox": {
+        "equals": true
+      }
+    }
+  ]
+});
 
 // ********** project ********** //
 router.get("/api/project", async function(req, res, next) {
@@ -43,7 +52,7 @@ router.get("/api/note", async function(req, res, next) {
 
   await axios.request(note_options)
   .then(response => {
-    notes = response.data;
+    notes = response.data.results;
   })
   .catch(error => {
     console.log("notion get notes error : ", error);
@@ -51,6 +60,7 @@ router.get("/api/note", async function(req, res, next) {
 
   res.send(notes);
 })
+
 
 
 module.exports = router;

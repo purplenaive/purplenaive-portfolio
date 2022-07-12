@@ -3,7 +3,7 @@
 
     <div id="project-tile" class="tile-title">
       <h2 class="title__text">프로젝트</h2>
-      <a class="view-all-list">
+      <a class="view-all-list" href="#" target="_blank">
         <span class="button__text">글 전체 목록</span>
         <span class="icon-wrapper">
           <i class="icon hamburger-thin"></i>

@@ -294,9 +294,9 @@ export default {
 
 .section-resume {
   grid-template-areas: 
-  "career         career         license        memoji         memoji"
-  "career         career         introduce      introduce      tools"
-  "career         career         introduce      introduce      tools"
+  "career  career  license    memoji     memoji"
+  "career  career  introduce  introduce  tools"
+  "career  career  introduce  introduce  tools"
   ;
 }
 
