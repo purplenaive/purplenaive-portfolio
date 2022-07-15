@@ -436,6 +436,7 @@ export default {
       grid-template-columns: repeat(1, 40px);
     }
     @include responsive-custom(420) {
+      width: 100%;
       grid-template-columns: repeat(3, 40px);
     }
   }
@@ -454,6 +455,7 @@ export default {
       grid-template-columns: repeat(4, 40px);
     }
     @include responsive-custom(420) {
+      width: 100%;
       grid-template-columns: repeat(3, 40px);
     }
   }

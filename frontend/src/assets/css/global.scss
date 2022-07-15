@@ -78,10 +78,16 @@
     background: #FFFDFA no-repeat center top;
     background-image: image-set(
       url("@/assets/image/vector-background.webp") 1x,
-      url("@/assets/image/vector-background.png") 1x,
       url("@/assets/image/vector-background.jpg") 1x,
     );
     background-size: cover;
+    
+    @include responsive-1280 {
+      background-image: image-set(
+        url("@/assets/image/vector-background-1280.webp") 1x,
+        url("@/assets/image/vector-background-1280.jpg") 1x,
+      );
+    }
   }
 }
 
