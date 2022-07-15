@@ -1,5 +1,3 @@
-@import "~@/assets/css/icon";
-
 // ********** FLEX ********** //
 @mixin flex($inline, $direction, $wrap, $justify, $align) {
   display: if($inline, inline-flex, flex);
@@ -64,7 +62,12 @@
 }
 
 // ********** TILE 크기 지정 ********** //
-@mixin tile($width: 1, $height: 1 ) {
-  width: 200 * $width + (16 * ($width - 1)) * 1px;
-  height: (200 * $height) + (16 * ($height - 1)) * 1px;
+@mixin tile($width: 1, $height: 1, $standard: 200) {
+  width: $standard * $width + (16 * ($width - 1)) * 1px;
+  height: ($standard * $height) + (16 * ($height - 1)) * 1px;
+
+  @include responsive-768 {
+    width: unset;
+    height: auto;
+  }
 }

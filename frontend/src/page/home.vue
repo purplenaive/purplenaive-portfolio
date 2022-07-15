@@ -9,9 +9,10 @@
   </main>
 
   <main-nav></main-nav>
+  <main-footer></main-footer>
 
   <div class="background-image"></div>
-  <main-footer></main-footer>
+  <loading-spinner></loading-spinner>
 
 </template>
 
@@ -21,11 +22,12 @@ import mainFooter from "@/components/footer.vue";
 import resumeTiles from "@/components/resumeTiles.vue";
 import projectTiles from "@/components/projectTiles.vue";
 import noteTiles from "@/components/noteTiles.vue";
+import loadingSpinner from "@/components/loadingSpinner.vue"
 
 export default {
   name: 'mainHome',
   components: {
-    mainNav, mainFooter, resumeTiles, projectTiles, noteTiles,
+    mainNav, mainFooter, resumeTiles, projectTiles, noteTiles, loadingSpinner,
   },
   data() {
     return {
@@ -35,16 +37,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#main {
-  width: auto;
-}
+  #main {
+    width: auto;
+  }
 
-.main__content {
-  @include flex(false, column, nowrap, flex-start, center);
-  
-  position: relative;
-  gap: 16px;
-  z-index: 1;
-}
+  .main__content {
+    @include flex(false, column, nowrap, flex-start, center);
+
+    position: relative;
+    gap: 16px;
+    z-index: 1;
+
+    @include responsive-768 {
+      padding: 0 24px;
+    }
+  }
 
 </style>

@@ -2,7 +2,7 @@
   <section class="section section-note">
     <div id="note-tile" class="tile-title">
       <h2 class="title__text">공부 노트</h2>
-      <a class="view-all-list" href="https://www.notion.so/purplenaive/d1619275de714a158cc8d90bef99ddb4?v=83e98783aabf4d8bb7a2e36cef5a7829" target="_blank">
+      <a class="view-all-list" href="https://purplenaive.notion.site/d1619275de714a158cc8d90bef99ddb4?v=83e98783aabf4d8bb7a2e36cef5a7829" target="_blank">
         <span class="button__text">글 전체 목록</span>
         <span class="icon-wrapper">
           <i class="icon hamburger-thin"></i>
@@ -62,6 +62,10 @@ export default {
       });
 
       this.note.data = trim_data;
+
+      this.$nextTick(() => {
+        this.$store.dispatch("inactiveLoadingSpinner");
+      });
     },
   },
   mounted() {
@@ -78,6 +82,26 @@ export default {
     "note-title     note-title     note-title     note-title     note-title"
     "work-profile   work-profile   .              .              ."
   ;
+
+  @include responsive-1280 {
+    grid-template-areas: 
+    "note-title    note-title    note-title"
+    "work-profile  work-profile  ."
+    ;
+  }
+  @include responsive-768 {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: minmax(50px, auto) !important;
+    grid-auto-rows: minmax(vh(1024, 200), auto) !important;
+    grid-template-areas: 
+    "note-title    note-title"
+    "work-profile  work-profile"
+    ;
+  }
+  @include responsive-custom(640) {
+    @include flex(false, column, nowrap, flex-start, center);
+  }
 }
 
 .tile-title {
@@ -88,11 +112,20 @@ export default {
   @include glassmorphism($padding: false, $tilt: false);
 
   position: relative;
+
+  @include responsive-custom(640) {
+    width: 100% !important;
+    height: 160px !important;
+  }
 }
 .work-profile {
   @include tile(2, 1);
 
   grid-area: work-profile;
+
+  @include responsive-768 {
+    display: none;
+  }
 
   .profile-image {
     display: block;

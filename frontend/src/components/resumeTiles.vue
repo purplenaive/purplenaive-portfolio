@@ -5,7 +5,7 @@
     <article id="resume-tile" class="tile tile-resume tile-memoji scrollNav">
       <div class="tile__content">
         <p class="memoji">
-          <!-- <img src="" alt="" class="memoji-image"> -->
+          <i class="icon normal astronaut"></i>
         </p>
         <div class="memoji-introduce">
           <strong class="strong">
@@ -298,32 +298,77 @@ export default {
   "career  career  introduce  introduce  tools"
   "career  career  introduce  introduce  tools"
   ;
+
+  @include responsive-1280 {
+    grid-template-areas: 
+    "license    memoji     memoji"
+    "introduce  introduce  tools"
+    "introduce  introduce  tools"
+    "career     career     career"
+    "career     career     career"
+    ;
+  }
+  @include responsive-768 {
+    width: 100%;
+    gridd-template-rows: minmax(100px, auto);
+    grid-template-areas:
+    "license    license    memoji    memoji     memoji"
+    "tools      tools      tools     tools      tools"
+    "tools      tools      tools     tools      tools"
+    "introduce  introduce  introduce  introduce  introduce"
+    "introduce  introduce  introduce  introduce  introduce"
+    "introduce  introduce  introduce  introduce  introduce"
+    "introduce  introduce  introduce  introduce  introduce"
+    "career     career     career    career     career"
+    "career     career     career    career     career"
+    "career     career     career    career     career"
+    "career     career     career    career     career"
+    "career     career     career    career     career"
+    ;
+  }
+  @include responsive-custom(640) {
+    @include flex(false, column, nowrap, flex-start, center);
+  }
 }
 
 .tile {
   @include glassmorphism($tilt: false);
+
+  @include responsive-custom(640) {
+    width: 100% !important;
+  }
 }
 
 .tile-memoji {
   @include tile(2, 1);
 
   grid-area: memoji;
+
+  @include responsive-768 {
+    // min-height: 200px;
+  }
   
   .tile__content {
     @include flex(false, row, nowrap, center, center);
+
+    gap: 24px;
+
+    @include responsive-custom(480) {
+      flex-wrap: wrap;
+    }
   }
 
   .memoji {
-    width: 90px;
-    height: 110px;
-    margin-right: 24px;
-    background-color: beige;
 
-    img {
-      display: block;
-      width: auto;
-      height: 100%;
-    }
+    .icon {
+      width: 101px;
+      height: 125px;
+
+      @include responsive-768 {
+        width: calc(100 * 0.8) + px;
+        height: calc(126 * 0.8) + px;
+      }
+    }    
   }
   .memoji-introduce {
     line-height: 1.2;
@@ -349,10 +394,25 @@ export default {
 
   .tile__content {
     @include flex(false, column, nowrap, center, center);
+
+    @include responsive-768 {
+      @include flex(false, row, nowrap, center, center);
+    }
+    @include responsive-custom(640) {
+      flex-wrap: wrap;
+    }
   }
 
   .basic-info-list {
     margin-bottom: 24px;
+
+    @include responsive-768 {
+      margin: 0 24px 0 0;
+    }
+    @include responsive-custom(640) {
+      width: 100%;
+      margin: 0 0 24px;
+    }
 
     .info__item {
       text-align: center;
@@ -366,6 +426,18 @@ export default {
     align-content: start;
     gap: 4px;
     margin-bottom: 4px;
+
+    @include responsive-768 {
+      grid-template-columns: 40px;
+      grid-template-rows: 40px;
+      margin-bottom: 0;
+    }
+    @include responsive-custom(480) {
+      grid-template-columns: repeat(1, 40px);
+    }
+    @include responsive-custom(420) {
+      grid-template-columns: repeat(3, 40px);
+    }
   }
   .link-list {
     display: grid;
@@ -373,6 +445,17 @@ export default {
     align-content: start;
     justify-content: center;
     gap: 4px;
+
+    @include responsive-768 {
+      grid-template-columns: repeat(4, 40px);
+      grid-template-rows: 40px;
+    }
+    @include responsive-custom(480) {
+      grid-template-columns: repeat(4, 40px);
+    }
+    @include responsive-custom(420) {
+      grid-template-columns: repeat(3, 40px);
+    }
   }
   .link-list,
   .tools-list {
@@ -388,6 +471,10 @@ export default {
   @include tile(1, 1);
 
   grid-area: license;
+
+  @include responsive-768 {
+    min-height: 200px;
+  }
 
   .tile__title {
     background-color: $tile-yellow;
@@ -408,6 +495,7 @@ export default {
     font-size: $font-xs;
   }
 }
+
 .tile-introduce {
   @include tile(2, 2);
 
@@ -436,10 +524,15 @@ export default {
     color: $font-gray;
   }
 }
+
 .tile-career {
   @include tile(2, 3);
 
   grid-area: career;
+
+  @include responsive-1280 {
+    @include tile(3, 3);
+  }
 
   .tile__content {
     @include flex(false, column, nowrap, flex-start, stretch);

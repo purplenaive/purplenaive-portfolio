@@ -1,10 +1,58 @@
 @charset "UTF-8";
+
+@import "~@/assets/css/reset";
+@import "~@/assets/css/variables";
+@import "~@/assets/css/icon";
 @import "~@/assets/css/mixin";
 @import "~@/assets/css/font";
 
 .strong { font-weight: 700; }
 .underline { text-decoration: underline; }
 
+
+// ********** responsive ********** //
+@mixin responsive-1920() {
+  @media all and ( max-width: 1919px ) {
+    @content;
+  }
+}
+@mixin responsive-1440() {
+  @media all and ( max-width: 1439px ) {
+    @content;
+  }
+}
+@mixin responsive-1366() {
+  @media all and ( max-width: 1365px ) {
+    @content;
+  }
+}
+@mixin responsive-1280() {
+  @media all and ( max-width: 1279px ) {
+    @content;
+  }
+}
+@mixin responsive-768() {
+  @media all and ( max-width: 767px ) {
+    @content;
+  }
+}
+@mixin responsive-375() {
+  @media all and ( max-width: 374px ) {
+    @content;
+  }
+}
+@mixin responsive-custom($width) {
+  @media all and ( max-width: $width - 1 + px ) {
+    @content;
+  }
+}
+
+@function vw($width: 1920, $value: 10) {
+  @return ($value / ($width * 0.01)) + vw;
+}
+@function vh($height: 1080, $value: 10) {
+  @return ($value / ($height * 0.01)) + vh;
+}
 
 // ********** #app ********** //
 #app {
@@ -43,6 +91,18 @@
   gap: 16px;
   grid-template-columns: repeat(5, 200px);
   grid-auto-flow: row dense;
+  
+  @include responsive-1280 {
+    grid-template-columns: repeat(3, 200px);
+  }
+  @include responsive-768 {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: minmax(50px, auto);
+    grid-auto-rows: 100px;
+  }
+  @include responsive-custom(640) {
+    display: flex;
+  }
 }
 
 // ********** tile title ********** //
@@ -56,7 +116,12 @@
   color: $font-gray;
   text-align: center;
   font-family: $ptd;
-  
+
+  @include responsive-768 {
+    width: 100%;
+    height: 50px;
+  }
+
   .view-all-list {
     @include flex(false, row, nowrap, flex-end, center);
     
@@ -69,6 +134,10 @@
     .button__text {
       margin-right: 12px;  
       color: $font-gray;
+
+      @include responsive-custom(640) {
+        display: none;
+      }
     }
   }
   .icon-wrapper {
@@ -82,4 +151,15 @@
       @include icon-custom(15);
     }
   }
+}
+
+// ********** vue Transition ********** //
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }

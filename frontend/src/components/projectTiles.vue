@@ -3,7 +3,7 @@
 
     <div id="project-tile" class="tile-title">
       <h2 class="title__text">프로젝트</h2>
-      <a class="view-all-list" href="#" target="_blank">
+      <a class="view-all-list" href="https://purplenaive.notion.site/bb8c08d768a2428990305d0427d63665?v=6b44271a15f64c61ac214c4127c5b4b5" target="_blank">
         <span class="button__text">글 전체 목록</span>
         <span class="icon-wrapper">
           <i class="icon hamburger-thin"></i>
@@ -159,6 +159,49 @@ export default {
     "elle           xiaomi         yg-stage       yg-stage       cafe24"
     "elle           maeil          paik           shinhan        cafe24"
   ;
+
+  @include responsive-1280 {
+    grid-template-areas: 
+    "project-title  project-title  project-title"
+    "kinderfest     barofactory    umc"
+    "kinderfest     barofactory    umc"
+    "barohome       barohome       pd04"
+    "simpol         yhsbearing     pd04"
+    "simpol         portfolio      portfolio"
+    "elle           yg-stage       yg-state"
+    "elle           xiaomi         cafe24"
+    "maeil          paik           shinhan"
+    ;
+  }
+  @include responsive-768 {
+    width: 100%;
+    grid-template-areas: 
+    "project-title  project-title  project-title  project-title  project-title"
+    "kinderfest     kinderfest     kinderfest     umc            umc"
+    "kinderfest     kinderfest     kinderfest     umc            umc"
+    "barohome       barohome       barofactory    barofactory    barofactory"
+    "barohome       barohome       barofactory    barofactory    barofactory"
+    "portfolio      portfolio      portfolio      pd04           pd04"
+    "portfolio      portfolio      portfolio      pd04           pd04"
+    "portfolio      portfolio      portfolio      pd04           pd04"
+    "simpol         simpol         yhsbearing     yhsbearing     yhsbearing"
+    "simpol         simpol         yhsbearing     yhsbearing     yhsbearing"
+    "yg-stage       yg-stage       yg-stage       elle           elle"
+    "yg-stage       yg-stage       yg-stage       elle           elle"
+    "xiaomi         xiaomi         cafe24         cafe24         cafe24"
+    "xiaomi         xiaomi         cafe24         cafe24         cafe24"
+    "maeil          maeil          maeil          paik           paik"
+    "maeil          maeil          maeil          paik           paik"
+    "shinhan        shinhan        shinhan        shinhan        shinhan"
+    "shinhan        shinhan        shinhan        shinhan        shinhan"
+    ;
+  }
+
+  &.section {
+    @include responsive-custom(640) {
+      @include flex(false, column, nowrap, flex-start, center);
+    }
+  }
 }
 
 .tile-title {
@@ -172,6 +215,11 @@ export default {
   padding: 24px;
   box-sizing: border-box;
   position: relative;
+
+  @include responsive-custom(640) {
+    width: 100% !important;
+    height: 200px !important;
+  }
 
   &:hover {
     
@@ -313,10 +361,72 @@ $tile-setting: (
   }
 }
 
+.tile-kinderfest {
+
+  .project__thumbnail {
+
+    img {
+
+      @include responsive-custom(640) {
+        width: auto;
+        height: vh(640, 40);
+      }
+    }
+  }
+  }
+.tile-barofactory {
+
+  .project__thumbnail {
+
+    img {
+
+      @include responsive-custom(640) {
+        width: auto;
+        height: vh(640, 40);
+      }
+    }
+  }
+}
 .tile-portfolio {
 
   .project__thumbnail {
     padding-top: 25px;
+
+
+    img {
+
+      @include responsive-768 {
+        width: auto;
+        height: 110px;
+      }
+      @include responsive-custom(640) {
+        width: auto;
+        height: vh(640, 50);
+      }
+    }
+  }
+}
+.tile-pd04 {
+  
+  .project__thumbnail {
+    
+    img {
+      
+      @include responsive-768 {
+        width: auto;
+        height: 140px;
+      }
+      @include responsive-custom(640) {
+        width: auto;
+        height: vh(640, 50);
+      }
+    }
+  }
+}
+.tile-cafe24 {
+
+  @include responsive-1280 {
+    @include tile(1, 1);
   }
 }
 .tile-maeil {
