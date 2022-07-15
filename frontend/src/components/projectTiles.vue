@@ -335,6 +335,7 @@ $tile-setting: (
   ( "name": barohome, "size": (2, 1), "color": "", ),
   ( "name": yhsbearing, "size": (1, 1), "color": "", ),
   ( "name": umc, "size": (1, 2), "color": "", ),
+  ( "name": simpol, "size": (2, 1), "color": "", ),
   ( "name": portfolio, "size": (2, 1), "color": $tile-purple, ),
   ( "name": pd04, "size": (1, 2), "color": $tile-yellow, ),
   ( "name": paik, "size": (1, 1), "color": "", ),
@@ -357,7 +358,7 @@ $tile-setting: (
     @include tile($width, $height);
 
     grid-area: $name;
-    background-color: if($color, $color, inherit);
+    background-color: if($color != '', $color, $tile-white);
   }
 }
 
@@ -404,6 +405,11 @@ $tile-setting: (
         height: vh(640, 50);
       }
     }
+  }
+}
+.tile-simpol {
+  @include responsive-1280 {
+    @include tile(1, 2);
   }
 }
 .tile-pd04 {
