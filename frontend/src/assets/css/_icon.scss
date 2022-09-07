@@ -84,7 +84,7 @@
       @if $value == transparent {
         background-image: unset;
       } @else {
-        background-image: url(icon($key));
+        background-image: url($value);
       }
     }
   }

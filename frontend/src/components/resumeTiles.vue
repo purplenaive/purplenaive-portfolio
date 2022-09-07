@@ -344,10 +344,6 @@ export default {
 
   grid-area: memoji;
 
-  @include responsive-768 {
-    // min-height: 200px;
-  }
-  
   .tile__content {
     @include flex(false, row, nowrap, center, center);
 
@@ -365,7 +361,7 @@ export default {
       height: 125px;
 
       @include responsive-768 {
-        width: calc(100 * 0.8) + px;
+        width: calc(100 * 0.8 + 2) + px;
         height: calc(126 * 0.8) + px;
       }
     }    
