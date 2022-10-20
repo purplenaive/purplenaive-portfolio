@@ -2,7 +2,7 @@
 
 - 이름 : portfolio-2022
 - 작업 기간 : 2022.01.20 ~ 2022.07.15
-- 현재 버전 : ver 1
+- 현재 버전 : ver 1 <a href="https://github.com/purplenaive/portfolio-2022.git" target="_blank">(ver 2 바로가기)</a>
 
 
 ## 설명
